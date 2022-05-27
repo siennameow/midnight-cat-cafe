@@ -1,0 +1,25 @@
+{
+  "name": "midnight-cat-cafe",
+  "version": "1.0.0",
+  "description": "A website for a fictional cafe called the midnight cat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvbridge/midnight-cat-cafe.git"
+  },
+  "keywords": [
+    "e-commerce",
+    "cafe",
+    "website"
+  ],
+  "author": "Jonathan Bridge, Sienna Li, Lucca Martins, YiLin Ong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvbridge/midnight-cat-cafe/issues"
+  },
+  "homepage": "https://github.com/jvbridge/midnight-cat-cafe#readme",
+  "dependencies": {}
+}
