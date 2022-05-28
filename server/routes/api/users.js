@@ -17,4 +17,13 @@ router.post("/login", (req, res) => {
   }
 });
 
+router.post("/logout", (req, res) => {
+  try {
+    // TODO: express session
+    res.sendStatus(200);
+  } catch (err) {
+    res.status(5000).json(err);
+  }
+});
+
 module.exports = router;
