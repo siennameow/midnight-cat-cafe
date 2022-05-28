@@ -27,6 +27,10 @@ router.post("/:id", (req, res) => {
     // TODO: retrieve user ID
     // TODO: retrieve an individual event
     // add user to event
+    console.info("got a request to add a user to an event");
+    console.info("User:", req.body.user);
+    console.info("Event:", req.params.id);
+
     res.sendStatus(200);
   } catch (err) {
     res.status(500).json(err);
@@ -37,6 +41,10 @@ router.delete("/:id", (req, res) => {
     // TODO: retrieve user ID
     // TODO: retrieve an individual event
     // add user to event
+    console.info("got a request to remove a user from an event");
+    console.info("User:", req.body.user);
+    console.info("Event:", req.params.id);
+
     res.sendStatus(200);
   } catch (err) {
     res.status(500).json(err);
