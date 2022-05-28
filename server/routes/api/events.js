@@ -1,4 +1,6 @@
 const router = require("express").Router();
+// TODO: events model
+// TODO: users model
 
 router.get("/", (req, res) => {
   try {
@@ -20,10 +22,21 @@ router.get("/:id", (req, res) => {
   }
 });
 
-router.post("/", (req, res) => {
+router.post("/:id", (req, res) => {
   try {
     // TODO: retrieve user ID
-
+    // TODO: retrieve an individual event
+    // add user to event
+    res.sendStatus(200);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+router.delete("/:id", (req, res) => {
+  try {
+    // TODO: retrieve user ID
+    // TODO: retrieve an individual event
+    // add user to event
     res.sendStatus(200);
   } catch (err) {
     res.status(500).json(err);
