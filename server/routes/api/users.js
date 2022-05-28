@@ -8,4 +8,13 @@ router.get("/", (req, res) => {
   }
 });
 
+router.post("/login", (req, res) => {
+  try {
+    // TODO: express session
+    res.sendStatus(200);
+  } catch (err) {
+    res.status(5000).json(err);
+  }
+});
+
 module.exports = router;
