@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "node server.js --ignore client"
+    "server": "node server.js --ignore client",
+    "dev": "nodemon server.js --ignore client"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-session": "^1.17.3",
-    "mongoose": "^6.3.4"
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
   }
 }
