@@ -1,4 +1,6 @@
-.DS_Store
 ignore/
 node_modules/
 build/
+
+.DS_Store
+.env
