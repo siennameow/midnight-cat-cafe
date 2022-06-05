@@ -36,7 +36,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addEvent: async(parent, { title, time }),
+    addEvent: async (parent, { title, time }) => {},
   },
 };
 

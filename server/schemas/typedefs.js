@@ -15,7 +15,7 @@ const typeDefs = gql`
 
   type Event {
     users: [User]
-    time: Date!
+    # time: Date!
     name: String!
   }
 
@@ -29,9 +29,9 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addEvent(title: String!, time: Date!): Event
+    addEvent(title: String!): Event
     # TODO: remove user, event, add user to event
   }
 `;
-
+// TODO: date and time in graphql
 module.exports = typeDefs;
