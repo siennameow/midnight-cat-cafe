@@ -1,16 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-// checks the password
-const checkPassword = (loginPw, userPw) => {
-  return bcrypt.compareSyn(loginPw, userPw);
-};
-
-const createPassword = async (newPw) => {
-  const newHash = await bcrypt.hash(newPw, 10);
-  return newHash;
-};
-
 const userSchema = new Schema(
   {
     username: {
@@ -52,4 +42,4 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 const User = model("User", userSchema);
-model.exports = User;
+module.exports = User;

@@ -1,2 +1,4 @@
 const User = require("./user");
-model.exports = { User };
+const Event = require("./event");
+
+module.exports = { User, Event };

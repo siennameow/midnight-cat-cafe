@@ -5,15 +5,18 @@
   "main": "server.js",
   "scripts": {
     "server": "node server.js --ignore client",
-    "dev": "nodemon server.js --ignore client"
+    "dev": "nodemon server.js --ignore client",
+    "watch": "nodemon server.js --ignore client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-express": "^3.8.2",
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.4",
     "nodemon": "^2.0.16"
   }
