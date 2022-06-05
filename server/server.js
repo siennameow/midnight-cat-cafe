@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3001;
-// const routes = require("./routes");
-const db = require("./config/connection");
+const PORT = process.env.PORT || 3001; // backend lives on 3001 by default
+const db = require("./config/connection"); // database connection
+
 // apollo server requires
 const { ApolloServer } = require("apollo-server-express");
 const { typeDefs, resolvers } = require("./schemas");
@@ -13,6 +13,7 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+// middleware for talking to other things and json
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
+// define the way to start the server
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
@@ -38,4 +40,6 @@ const startApolloServer = async (typeDefs, resolvers) => {
     });
   });
 };
+
+// actually start the server
 startApolloServer(typeDefs, resolvers);
