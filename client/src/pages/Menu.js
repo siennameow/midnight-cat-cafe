@@ -1,9 +1,8 @@
-import React from 'react';
-import { Container, Card, Row, Col, Button } from 'react-bootstrap';
+import React from "react";
+import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import Auth from "../utils/auth";
 
-const menuItems = require('../menu-items.json');
-
-import Auth from '../utils/auth';
+const menuItems = require("../menu-items.json");
 
 const Menu = () => {
   const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -14,14 +13,13 @@ const Menu = () => {
 
   const handleMenuImageChange = async (menuItemId) => {
     try {
-      const menuItemImg = document.querySelector('#menuItemImg');
-      
+      const menuItemImg = document.querySelector("#menuItemImg");
+
       for (let i = 0; i < menuItems.length; i++) {
         if (menuItems[i].id === menuItemId) {
-          menuItemImg.setAttribute('src', menuItems[i].image);
+          menuItemImg.setAttribute("src", menuItems[i].image);
         }
-      };
-      
+      }
     } catch (err) {
       console.error(err);
     }
@@ -38,17 +36,24 @@ const Menu = () => {
                 <Card>
                   <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{item.price}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">
+                      {item.price}
+                    </Card.Subtitle>
                     <Card.Text>{item.description}</Card.Text>
                   </Card.Body>
-                  <Button variant="primary" onClick={() => handleMenuImageChange(item.menuItemId)}>Select</Button>
+                  <Button
+                    variant="primary"
+                    onClick={() => handleMenuImageChange(item.menuItemId)}
+                  >
+                    Select
+                  </Button>
                 </Card>
               );
             })}
           </Col>
           <Col>
             <Card>
-              <Card.Img id='menuItemImg'/>
+              <Card.Img id="menuItemImg" />
             </Card>
           </Col>
         </Row>
