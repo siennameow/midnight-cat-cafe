@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignUpForm from '../register/SignupForm';
 import LoginForm from '../register/LoginForm';
-
+import '../nav/navbar-styles.css'
 import Auth from '../../utils/auth';
 
 const AppNavbar = () => {
@@ -11,23 +11,23 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar className="light" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} to='/'>Midnight Cat Cafe</Navbar.Brand>
+          <Navbar.Brand as={Link} to='/' className="navbrand">Midnight Cat Cafe</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-              <Nav.Link as={Link} to='/menu'>Menu</Nav.Link>
-              <Nav.Link as={Link} to='/shopping'>Shopping</Nav.Link>
-              <Nav.Link as={Link} to='/events'>Events</Nav.Link>
+
+              <Nav.Link as={Link} to='/menu' className="navbrand">Menu</Nav.Link>
+              <Nav.Link as={Link} to='/shopping' className="navbrand">Shopping</Nav.Link>
+              <Nav.Link as={Link} to='/events' className="navbrand">Events</Nav.Link>
               <Nav.Link>
                 {Auth.loggedIn() ? (
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  <Nav.Link onClick={Auth.logout} className="navbrand">Logout</Nav.Link>
                 ) : (
-                  <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                  <Nav.Link onClick={() => setShowModal(true)} className="navbrand">Login/Sign Up</Nav.Link>
                 )}
               </Nav.Link>
-          </Nav>
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

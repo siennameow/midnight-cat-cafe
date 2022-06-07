@@ -1,0 +1,24 @@
+.light {
+    background-color: #827397;
+    font-size: 24px;
+    line-height: 1.3334133333;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.navbrand {
+    color: #ffffff !important;
+    font-size: 24px;
+    line-height: 1.3334133333;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.navbrand:hover {
+    border-radius: 2em !important;
+    background-color: #ffffff;
+    padding: 10px;
+    color: #363062 !important; 
+}
