@@ -99,7 +99,7 @@ const generateEvent = () => {
   );
   const time = randomDate(new Date(), oneYearFromNow);
 
-  return { title, time };
+  return { title, time, users: [] };
 };
 
 /**
@@ -115,6 +115,31 @@ const generateManyEvents = (count) => {
     ret.push(event);
   }
   return ret;
+};
+
+/**
+ *
+ * @param {Number} count how many events a user should have
+ */
+const addUsersToEvents = async (count) => {
+  // get the whole database for now
+  const users = await User.find({});
+  const events = await Event.find({});
+
+  const promises = [];
+  // add users to random events
+  users.forEach((user) => {
+    for (let i = 0; i < count; i++) {
+      const randEvent = getRandom(events);
+      randEvent.users.push(user._id);
+    }
+  });
+
+  // update all the events
+  events.forEach((curr) => {
+    promises.push(curr.save());
+  });
+  await Promise.all(promises);
 };
 
 // ========================================================================== //
@@ -144,6 +169,10 @@ db.once("open", async () => {
 
   // insert them into the database
   await Event.collection.insertMany(events);
+
+  console.info("adding users to the events");
+  await addUsersToEvents(EVENT_SUBSCRIPTION);
+
   // seeding complete exit node
   process.exit(0);
 });
