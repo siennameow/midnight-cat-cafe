@@ -1,6 +1,7 @@
 const { signToken } = require("../util/auth");
 const { User, Event } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
+const { events } = require("../models/user");
 
 const resolvers = {
   Query: {
@@ -15,6 +16,12 @@ const resolvers = {
         return User.findById({ _id: context.user._id });
       }
       throw new AuthenticationError("You need to be logged in!");
+    },
+    events: async () => {
+      return Event.find({}).populate("users");
+    },
+    event: async (parent, { title }) => {
+      return Event.findOne({ title }).populate("users");
     },
   },
   Mutation: {

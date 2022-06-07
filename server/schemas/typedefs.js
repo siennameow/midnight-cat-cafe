@@ -15,21 +15,21 @@ const typeDefs = gql`
 
   type Event {
     users: [User]
-    # time: Date!
-    name: String!
+    time: String!
   }
 
   type Query {
     users: [User]
     user(username: String!): User
     me: User
-    # TODO: query events
+    events: [Event]
+    event(title: String!): Event
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addEvent(title: String!): Event
+    addEvent(title: String!, time: String!): Event
     # TODO: remove user, event, add user to event
   }
 `;
