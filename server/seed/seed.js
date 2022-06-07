@@ -14,6 +14,15 @@ const EVENT_SUBSCRIPTION = 3;
 const PASSWORD = "password";
 
 /**
+ * Gets a random member of an array
+ * @param {Array} arr
+ * @return
+ */
+const getRandom = (arr) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
+
+/**
  * Generates an object useful for creating a user
  * @return {Object}
  */
@@ -27,16 +36,8 @@ const generateUser = () => {
   const email = firstName.toLowerCase() + "@" + website;
   const username = firstName[0].toLowerCase() + lastName;
 
+  // return an object
   return { username, email, password: PASSWORD };
-};
-
-/**
- * Gets a random number member of an array
- * @param {Array} arr
- * @return
- */
-const getRandom = (arr) => {
-  return arr[Math.floor(Math.random() * arr.length)];
 };
 
 const seed = () => {
