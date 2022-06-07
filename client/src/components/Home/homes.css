@@ -1,0 +1,60 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+
+.h1-font {
+    justify-content: center !important;
+    text-align: center !important;
+    color: #5B4B8A;
+    margin-top: 100px;
+}
+
+.inquire {
+background-color: #5B4B8A !important;
+color: white !important;
+font-weight: 500;
+padding: 12px;
+border-radius: 3em;
+font-size: 22px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card-1 {
+    border: none !important;
+}
+p {
+    margin-top: 20px;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.container-home {
+    padding: 10px;
+}
+
+
+.legend-1 {
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    color: #ffffff;
+    font-size: 120px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    background-color: none !important;
+
+}
+
+img { 
+    opacity: 70% !important;
+}
+
+.image1 {
+    border-color: #5B4B8A;
+    border: 1px;
+}
