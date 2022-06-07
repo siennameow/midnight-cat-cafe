@@ -24,6 +24,11 @@ font-size: 22px;
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.btn-primary {
+    border-color: none !important;
+    border: 0px !important;
+}
+
 .card-1 {
     border: none !important;
 }
