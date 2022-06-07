@@ -24,9 +24,10 @@ const getRandom = (arr) => {
 
 /**
  * Generates an object useful for creating a user
+ * @param dict a dictionary object ensuring uniqueness
  * @return {Object}
  */
-const generateUser = () => {
+const generateUser = (dict) => {
   // random data to generate the user
   const firstName = getRandom(names);
   const lastName = getRandom(names);
@@ -36,11 +37,45 @@ const generateUser = () => {
   const email = firstName.toLowerCase() + "@" + website;
   const username = firstName[0].toLowerCase() + lastName;
 
+  // check to make sure the values are unique
+  if (dict[email] || dict[username]) {
+    // not unique, try again
+    return generateUser(dict);
+  }
+  // they are unique, update our table and return the users
+  dict[username] = true;
+  dict[email] = true;
+
   // return an object
   return { username, email, password: PASSWORD };
 };
 
+/**
+ * Generates an array of unique users
+ * @param {Number} count how many users to create
+ * @returns {Object[]}
+ */
+const generateManyUsers = (count) => {
+  // all the users must be unique, we will store their usernames and emails
+  const dict = {};
+  const ret = [];
+  // make the appropriate number of users
+  for (let i = 0; i < count; i++) {
+    ret.push(generateUser(dict));
+  }
+  return ret;
+};
+
+/**
+ * The main function of the seeding
+ */
 const seed = () => {
+  // generate the users we want
+  const users = generateManyUsers(USER_COUNT);
+  console.table(users);
+
+  // TODO: insert into the database
+
   // seeding complete
   process.exit(0);
 };
