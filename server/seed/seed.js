@@ -2,6 +2,7 @@ const { User, Event } = require("../models");
 const db = require("../config/connection");
 const names = require("./names.json");
 const websites = require("./websites.json");
+const eventNames = require("./events.json");
 
 // ========================================================================== //
 // Constants
@@ -87,6 +88,35 @@ const generateManyUsers = (count) => {
   return ret;
 };
 
+/**
+ * Generates an event randomly between now and a year from now.
+ * @returns {Object}
+ */
+const generateEvent = () => {
+  const title = getRandom(eventNames);
+  const oneYearFromNow = new Date(
+    new Date().setFullYear(new Date().getFullYear() + 1)
+  );
+  const time = randomDate(new Date(), oneYearFromNow);
+
+  return { title, time };
+};
+
+/**
+ * Generates a bunch of events with unique names
+ * @param {Number} count how many events we want to make
+ * @returns {Object[]}
+ */
+const generateManyEvents = (count) => {
+  let ret = [];
+  for (let i = 0; i < count; i++) {
+    const event = generateEvent();
+    event.title = event.title + " " + i;
+    ret.push(event);
+  }
+  return ret;
+};
+
 // ========================================================================== //
 // Seeding
 // ========================================================================== //
@@ -101,11 +131,19 @@ db.once("open", async () => {
 
   // generate the users we want
   const users = generateManyUsers(USER_COUNT);
+  console.info("Users generated:");
   console.table(users);
 
   // insert them into the database
   await User.collection.insertMany(users);
 
+  // generate the events
+  const events = generateManyEvents(EVENT_COUNT);
+  console.info("Events generated");
+  console.table(events);
+
+  // insert them into the database
+  await Event.collection.insertMany(events);
   // seeding complete exit node
   process.exit(0);
 });
