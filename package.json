@@ -2,7 +2,7 @@
   "name": "midnight-cat-cafe",
   "version": "1.0.0",
   "description": "A website for a fictional cafe called the midnight cat",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/jvbridge/midnight-cat-cafe/issues"
   },
-  "homepage": "https://github.com/jvbridge/midnight-cat-cafe#readme",
+  "homepage": "https://midnight-cat-cafe.herokuapp.com/",
   "devDependencies": {
     "concurrently": "^7.2.1"
   }
