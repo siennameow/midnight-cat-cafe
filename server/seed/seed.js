@@ -3,7 +3,9 @@ const db = require("../config/connection");
 const names = require("./names.json");
 const websites = require("./websites.json");
 
+// ========================================================================== //
 // Constants
+// ========================================================================== //
 // How many users we want to have
 const USER_COUNT = 50;
 // how many events we want to generate
@@ -13,6 +15,9 @@ const EVENT_SUBSCRIPTION = 3;
 // the password the dummy  users will all use are the same
 const PASSWORD = "password";
 
+// ========================================================================== //
+// Functions
+// ========================================================================== //
 /**
  * Gets a random member of an array
  * @param {Array} arr
@@ -66,19 +71,25 @@ const generateManyUsers = (count) => {
   return ret;
 };
 
-/**
- * The main function of the seeding
- */
-const seed = () => {
+// ========================================================================== //
+// Seeding
+// ========================================================================== //
+
+// error handling
+db.on("error", (err) => err);
+
+db.once("open", async () => {
+  // start by emptying the database
+  await User.deleteMany({});
+  await Event.deleteMany({});
+
   // generate the users we want
   const users = generateManyUsers(USER_COUNT);
   console.table(users);
 
-  // TODO: insert into the database
+  // insert them into the database
+  await User.collection.insertMany(users);
 
-  // seeding complete
+  // seeding complete exit node
   process.exit(0);
-};
-
-// run our seed
-seed();
+});
