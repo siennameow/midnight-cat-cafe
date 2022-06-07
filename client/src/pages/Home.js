@@ -2,7 +2,7 @@ import React from 'react';
 import Carousels from "../components/Home/Carousel"
 import '../components/Home/homes.css'
 import { Button, Card, Container}from 'react-bootstrap'
-import { BREAK } from 'graphql';
+
 import { Link } from 'react-router-dom';
 
 function Home() {
