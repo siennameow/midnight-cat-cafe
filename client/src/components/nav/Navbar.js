@@ -6,7 +6,7 @@ import LoginForm from '../register/LoginForm';
 
 import Auth from '../../utils/auth';
 
-const Nav = () => {
+const AppNavbar = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -65,4 +65,4 @@ const Nav = () => {
   );
 };
 
-export default Navbar;
+export default AppNavbar;
