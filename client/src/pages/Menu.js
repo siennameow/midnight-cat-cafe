@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
-import Auth from "../utils/auth";
+// import Auth from "../utils/auth";
 
 const menuItems = require("../menu-items.json");
 
