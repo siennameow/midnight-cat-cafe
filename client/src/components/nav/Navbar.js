@@ -6,7 +6,7 @@ import LoginForm from '../register/LoginForm';
 
 import Auth from '../../utils/auth';
 
-const Navbar = () => {
+const Nav = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
