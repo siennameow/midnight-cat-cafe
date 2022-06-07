@@ -3,6 +3,7 @@ import Carousels from "../components/Home/Carousel"
 import '../components/Home/homes.css'
 import { Button, Card, Container}from 'react-bootstrap'
 import { BREAK } from 'graphql';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
     <br/>
 
     Our menu changes seasonally and covers a wide range of meals, from generous burritos and flavorful vegan bowls to comforting old-world sandwiches and our fresh and filling salads. 
-    <br/>    <br/> <Button className="inquire">View Menu</Button>
+    <br/>    <br/> <Link as={Link} to='/menu'><Button className="inquire">View Menu</Button></Link>
     <br/><br/>
 
     <h1 className='h1-font'>Events</h1>
