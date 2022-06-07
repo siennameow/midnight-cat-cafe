@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3001; // backend lives on 3001 by default
 const db = require("./config/connection"); // database connection
+const path = require("path");
 
 // apollo server requires
 const { ApolloServer } = require("apollo-server-express");
