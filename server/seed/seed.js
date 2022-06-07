@@ -28,6 +28,22 @@ const getRandom = (arr) => {
 };
 
 /**
+ * Gets a random date between the start dates and the end dates
+ * https://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
+ * @param {Date} start
+ * @param {Date} end
+ * @returns {Date}
+ */
+function randomDate(start, end) {
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
+}
+
+const d = randomDate(new Date(2012, 0, 1), new Date());
+console.log(d);
+
+/**
  * Generates an object useful for creating a user
  * @param dict a dictionary object ensuring uniqueness
  * @return {Object}
