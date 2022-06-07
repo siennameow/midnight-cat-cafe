@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from './components/nav/Navbar';
 import Events from "./pages/Events";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 // import Register from "./pages/Register";
 import Shopping from "./pages/Shopping";
@@ -43,7 +43,7 @@ function App() {
         <>
           <Navbar />
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+             <Route path="/" element={<Home />} /> 
             {/* <Route path="/register" element={<Register />} /> */}
             <Route path="/shopping" element={<Shopping />} />
             <Route path="/menu" element={<Menu />} />
