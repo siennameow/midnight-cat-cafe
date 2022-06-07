@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
 // import Auth from "../utils/auth";
 
-const menuItems = require("../menu-items.json");
+const menuItems = require("../components/menu/menu-items.json");
 
 const Menu = () => {
   // const token = Auth.loggedIn() ? Auth.getToken() : null;
