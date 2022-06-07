@@ -19,7 +19,7 @@ function Home() {
     <br/>
 
     Our menu changes seasonally and covers a wide range of meals, from generous burritos and flavorful vegan bowls to comforting old-world sandwiches and our fresh and filling salads. 
-    <br/>    <br/> <Link as={Link} to='/menu'><Button className="inquire">View Menu</Button></Link>
+    <br/>    <br/> <Link to='/menu'><Button className="inquire">View Menu</Button></Link>
     <br/><br/>
 
     <h1 className='h1-font'>Events</h1>
@@ -28,7 +28,7 @@ function Home() {
     <br/><br/>
     Midnight Cat Cafe is also available for private events. We love to celebrate!  And we are proud to have a full-time, in-house events department. The event planners are here to help you organize everything from selecting one of our venues, customizing food and beverage packages or booking entertainment. We can host from 10-100 guests.  Feel free to reach out to midnightcatcafe@gmail.com to inquire.
     <br/><br/>
-    <Button className="inquire">Inquire Now</Button>
+    <Link to='/Events'><Button className="inquire">Inquire Now</Button></Link>
     </p></Card>
     </Container>
     </div>
