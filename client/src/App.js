@@ -10,11 +10,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// import Navbar from './components/Navbar';
+import Navbar from './components/nav/Navbar';
 import Events from "./pages/Events";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Menu from "./pages/Menu";
-import Register from "./pages/Register";
+// import Register from "./pages/Register";
 import Shopping from "./pages/Shopping";
 
 const httpLink = createHttpLink({
@@ -41,10 +41,10 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            {/* <Route path="/register" element={<Register />} /> */}
             <Route path="/shopping" element={<Shopping />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/events" element={<Events />} />
