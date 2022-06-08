@@ -15,3 +15,13 @@ export const CREATE_USER = gql`
     }
   }
 `;
+
+export const ADD_ME_TO_EVENT = gql`
+  mutation Mutation($title: String!) {
+    addMeToEvent(title: $title) {
+      users {
+        username
+      }
+    }
+  }
+`;
