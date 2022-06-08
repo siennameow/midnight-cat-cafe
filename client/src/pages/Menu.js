@@ -1,36 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
 // import Auth from "../utils/auth";
 
 const menuItems = require("../components/menu/menu-items.json");
 
 const Menu = () => {
+  const [show, setShow] = useState(false)
+  const [image, setImage] = useState() 
   // const token = Auth.loggedIn() ? Auth.getToken() : null;
 
   // if (!token) {
   //   return false;
   // }
 
-  const handleMenuImageChange = async (menuItemId) => {
-    try {
-      const menuItemImg = document.querySelector("#menuItemImg");
-
-      for (let i = 0; i < menuItems.length; i++) {
-        if (menuItems[i].id === menuItemId) {
-          menuItemImg.setAttribute("src", menuItems[i].image);
-        }
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   return (
     <>
-      <h1 style={{textAlign: "center"}}>Menu</h1>
+      <h1 style={{textAlign: "center", paddingTop: "1%", paddingBottom: "1%"}}>Menu</h1>
       <Container style={{}}>
         <Row>
-          <Col xs={6}>
+          <Col md={6}>
             {menuItems.map((item) => {
               return (
                 <Card key={item.id} style={{marginBottom: "10px"}}>
@@ -43,7 +31,10 @@ const Menu = () => {
                   </Card.Body>
                   <Button
                     variant="primary"
-                    onClick={() => handleMenuImageChange(item.id)}
+                    onClick={() => {
+                      setShow(true)
+                      setImage(item.image)
+                    }} 
                   >
                     View
                   </Button>
@@ -51,10 +42,17 @@ const Menu = () => {
               );
             })}
           </Col>
-          <Col xs={6} style={{position: "fixed", right: "0px"}}>
-            <Card>
-              <Card.Img id="menuItemImg"/>
+   
+          <Col md={6} style={{position: "fixed", right: "0px"}}>
+          {
+            show && 
+            <Card style={{height: "500px", width: "500px" }}>
+              <Card.Img src={image} style={{height: "100%", width: "100%" }}/>
+              <Card.ImgOverlay>
+                <button onClick={() => setShow(false)} style={{color: "purple", float: "right", margin: "25px", padding: "0px"}}><p style={{margin: "5px"}}>X</p></button>
+              </Card.ImgOverlay>
             </Card>
+          }
           </Col>
         </Row>
       </Container>
