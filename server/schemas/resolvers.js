@@ -59,11 +59,24 @@ const resolvers = {
     },
     addMeToEvent: async (parent, { title }, context) => {
       if (context.user) {
-        const event = await Event.findOne({ title });
+        const event = await Event.findOne({ title }).populate("users");
         if (!event) {
           throw new UserInputError("No event of that title found");
         }
         event.users.push(context.user._id);
+        return event.save();
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removeMeFromEvent: async (parent, { title }, context) => {
+      if (context.user) {
+        const event = await Event.findOne({ title }).populate("users");
+        if (!event) {
+          throw new UserInputError("No event of that title found");
+        }
+        event.users = event.users.filter(
+          (user) => user._id != context.user._id
+        );
         return event.save();
       }
       throw new AuthenticationError("You need to be logged in!");

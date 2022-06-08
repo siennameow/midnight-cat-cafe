@@ -33,7 +33,7 @@ const typeDefs = gql`
     addEvent(title: String!, time: String!): Event
     deleteMe: String
     addMeToEvent(title: String!): Event
+    removeMeFromEvent(title: String!): Event
   }
 `;
-// TODO: date and time in graphql
 module.exports = typeDefs;
