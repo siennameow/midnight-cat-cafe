@@ -14,7 +14,6 @@ import Navbar from './components/nav/Navbar';
 import Events from "./pages/Events";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
-// import Register from "./pages/Register";
 import Shopping from "./pages/Shopping";
 
 const httpLink = createHttpLink({
