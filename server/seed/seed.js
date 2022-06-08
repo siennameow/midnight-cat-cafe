@@ -159,8 +159,12 @@ db.once("open", async () => {
   console.info("Users generated:");
   console.table(users);
 
+  const promises = [];
   // insert them into the database
-  await User.collection.insertMany(users);
+  users.forEach((user) => {
+    promises.push(User.create(user));
+  });
+  await Promise.all(promises);
 
   // generate the events
   const events = generateManyEvents(EVENT_COUNT);

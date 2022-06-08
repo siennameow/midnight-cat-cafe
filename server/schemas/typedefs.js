@@ -14,24 +14,33 @@ const typeDefs = gql`
   }
 
   type Event {
+    title: String!
     users: [User]
-    # time: Date!
-    name: String!
+    time: String!
   }
 
   type Query {
+    # Get all users
     users: [User]
+    # Get one user
     user(username: String!): User
+    # Get information about the current user base on web token
     me: User
-    # TODO: query events
+    # Get all events
+    events: [Event]
+    # Get one event
+    event(title: String!): Event
+    # Get the events the current logged in user has
+    getMyEvents: [Event]
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addEvent(title: String!): Event
-    # TODO: remove user, event, add user to event
+    addEvent(title: String!, time: String!): Event
+    deleteMe: String
+    addMeToEvent(title: String!): Event
+    removeMeFromEvent(title: String!): Event
   }
 `;
-// TODO: date and time in graphql
 module.exports = typeDefs;
