@@ -14,6 +14,7 @@ const typeDefs = gql`
   }
 
   type Event {
+    title: String!
     users: [User]
     time: String!
   }
@@ -31,7 +32,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addEvent(title: String!, time: String!): Event
     deleteMe: String
-    # TODO:add user to event
+    addMeToEvent(title: String!): Event
   }
 `;
 // TODO: date and time in graphql

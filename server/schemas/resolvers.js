@@ -57,6 +57,17 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    addMeToEvent: async (parent, { title }, context) => {
+      if (context.user) {
+        const event = await Event.findOne({ title });
+        if (!event) {
+          throw new UserInputError("No event of that title found");
+        }
+        event.users.push(context.user._id);
+        return event.save();
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 };
 
