@@ -20,11 +20,17 @@ const typeDefs = gql`
   }
 
   type Query {
+    # Get all users
     users: [User]
+    # Get one user
     user(username: String!): User
+    # Get information about the current user base on web token
     me: User
+    # Get all events
     events: [Event]
+    # Get one event
     event(title: String!): Event
+    # Get the events the current logged in user has
     getMyEvents: [Event]
   }
 
