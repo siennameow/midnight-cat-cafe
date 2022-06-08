@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Form, Alert, Button } from 'react-bootstrap';
 // import { useMutation } from '@apollo/client';
 
-// import Auth from '../utils/auth';
-// import { LOGIN_USER } from "../utils/mutations";
+// import Auth from '../../utils/auth';
+// import { LOGIN_USER } from "../../utils/mutations";
 
 const LoginForm = () => {
   const [userLoginData, setUserLoginData] = useState({ email: '', password: '' });
@@ -46,9 +46,10 @@ const LoginForm = () => {
   return (
     <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
       <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-        Incorrect email and/or password
+        Something went wrong with your login credentials!
       </Alert>
-      <Form.Group>
+
+      <Form.Group style={{marginBottom: "2%"}}>
         <Form.Label htmlFor='email'>Email</Form.Label>
         <Form.Control 
           type='text'
@@ -61,7 +62,7 @@ const LoginForm = () => {
         <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
       </Form.Group>
 
-      <Form.Group>
+      <Form.Group style={{marginBottom: "2%"}}>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
@@ -78,7 +79,7 @@ const LoginForm = () => {
           disabled={!(userLoginData.email && userLoginData.password)}
           type='submit'
           variant='success'>
-          Submit
+          Login
         </Button>
     </Form>
   );
