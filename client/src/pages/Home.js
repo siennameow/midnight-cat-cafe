@@ -3,6 +3,7 @@ import Carousels from "../components/Home/Carousel"
 import '../components/Home/homes.css'
 import { Button, Card, Container}from 'react-bootstrap'
 
+
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -18,7 +19,7 @@ function Home() {
     <p>Established in 2022, Midnight Cat Cafe is the place that celebrates delicious, fresh food, coffee, music and cats located at San Francisco, CA. <br/>
     <br/>
 
-    Our menu changes seasonally and covers a wide range of meals, from generous burritos and flavorful vegan bowls to comforting old-world sandwiches and our fresh and filling salads. 
+    Our menu changes seasonally and covers a wide range of meals, from yummy cupcakes to comforting old-world sandwiches and our fresh and filling salads. 
     <br/>    <br/> <Link to='/menu'><Button className="inquire">View Menu</Button></Link>
     <br/><br/>
 
@@ -28,7 +29,7 @@ function Home() {
     <br/><br/>
     Midnight Cat Cafe is also available for private events. We love to celebrate!  And we are proud to have a full-time, in-house events department. The event planners are here to help you organize everything from selecting one of our venues, customizing food and beverage packages or booking entertainment. We can host from 10-100 guests.  Feel free to reach out to midnightcatcafe@gmail.com to inquire.
     <br/><br/>
-    <Link to='/Events'><Button className="inquire">Inquire Now</Button></Link>
+  <Button onClick={() => window.location = 'mailto:midnightcatcafe@gmail.com'} className="inquire">Inquire Now</Button>
     </p></Card>
     </Container>
     </div>
