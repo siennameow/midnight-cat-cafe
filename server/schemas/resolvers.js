@@ -69,7 +69,10 @@ const resolvers = {
         if (!event) {
           throw new UserInputError("No event of that title found");
         }
-        event.users.push(context.user._id);
+        // if we aren't in the event already add us to it
+        if (event.users.indexOf(context.user) > -1) {
+          event.users.push(context.user);
+        }
         return event.save();
       }
       throw new AuthenticationError("You need to be logged in!");
