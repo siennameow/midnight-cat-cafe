@@ -5,7 +5,7 @@ import SignUpForm from '../register/SignupForm';
 import LoginForm from '../register/LoginForm';
 import '../nav/navbar-styles.css'
 import Auth from '../../utils/auth';
-
+import Logo from '../../assets/logo.png'
 const AppNavbar = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -13,7 +13,16 @@ const AppNavbar = () => {
     <>
       <Navbar className="light" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} to='/' className="navbrand">Midnight Cat Cafe</Navbar.Brand>
+        <img
+          alt="logo"
+          src={Logo}
+          width="60"
+          height="60"
+          className="d-inline-block align-top"
+          style={{marginRight: "2%"}}
+        />{' '}
+          <Navbar.Brand as={Link} to='/' className="navbrand"> 
+        Midnight Cat Cafe</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
 
