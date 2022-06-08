@@ -23,6 +23,12 @@ const resolvers = {
     event: async (parent, { title }) => {
       return Event.findOne({ title }).populate("users");
     },
+    getMyEvents: async (parent, args, context) => {
+      if (context.user) {
+        return Event.find({ users: context.user._id });
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
