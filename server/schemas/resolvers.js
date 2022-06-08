@@ -50,6 +50,13 @@ const resolvers = {
       };
       return Event.create(newEvent);
     },
+    deleteMe: async (parent, args, context) => {
+      if (context.user) {
+        await User.findByIdAndDelete(context.user._id);
+        return "User deleted";
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 };
 
