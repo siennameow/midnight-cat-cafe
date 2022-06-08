@@ -25,3 +25,13 @@ export const ADD_ME_TO_EVENT = gql`
     }
   }
 `;
+
+export const REMOVE_ME_FROM_EVENT = gql`
+  mutation Mutation($title: String!) {
+    removeMeFromEvent(title: $title) {
+      users {
+        username
+      }
+    }
+  }
+`;
