@@ -9,3 +9,11 @@
     margin-bottom: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.h1-font {
+    justify-content: center !important;
+    text-align: center !important;
+    color: #5B4B8A;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

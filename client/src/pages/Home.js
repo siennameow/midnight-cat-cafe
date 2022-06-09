@@ -9,8 +9,10 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div>
-    <Container className='container-home'>
 
+    <h1 className='h1-font'> Midnight Cat Cafe</h1>
+    <Container className='container-home'>
+    
     <Carousels />   
 
     <Card className='card-1'>
