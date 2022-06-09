@@ -1,5 +1,6 @@
 import React from "react";
 import "../Footer/footer.css"
+import Logo from '../../assets/logo1.png'
 
 function Footer () {
     return (
@@ -29,6 +30,9 @@ function Footer () {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-lg-2 col-md-6 text-center">
+                    <img src={Logo} alt="logo" style={{height: 100}}></img>
+                    </div>
                     </div>
                 </div>
                 <div className="footer_bg">
