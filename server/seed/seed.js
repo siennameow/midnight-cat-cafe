@@ -1,8 +1,8 @@
-const { User, Event } = require("../models");
-const db = require("../config/connection");
-const names = require("./names.json");
-const websites = require("./websites.json");
-const eventNames = require("./events.json");
+const { User, Event } = require('../models');
+const db = require('../config/connection');
+const names = require('./names.json');
+const websites = require('./websites.json');
+const eventNames = require('./events.json');
 
 // ========================================================================== //
 // Constants
@@ -14,9 +14,9 @@ const EVENT_COUNT = 20;
 // how many events each user will say they're going to
 const EVENT_SUBSCRIPTION = 3;
 // the password the dummy  users will all use are the same
-const PASSWORD = "password";
+const PASSWORD = 'password';
 // the name of the image passed in
-const IMAGE = "image.png";
+const IMAGE = 'image.png';
 // ========================================================================== //
 // Functions
 // ========================================================================== //
@@ -57,7 +57,7 @@ const generateUser = (dict) => {
   const website = getRandom(websites);
 
   // username and email are based off of their ficitonal names
-  const email = firstName.toLowerCase() + "@" + website;
+  const email = firstName.toLowerCase() + '@' + website;
   const username = firstName[0].toLowerCase() + lastName;
 
   // check to make sure the values are unique
@@ -99,8 +99,8 @@ const generateEvent = () => {
     new Date().setFullYear(new Date().getFullYear() + 1)
   );
   const time = randomDate(new Date(), oneYearFromNow);
-
-  return { title, time, users: [], image: IMAGE };
+  const description = title + ' is going to be a fun time!';
+  return { title, time, users: [], image: IMAGE, description };
 };
 
 /**
@@ -112,7 +112,7 @@ const generateManyEvents = (count) => {
   let ret = [];
   for (let i = 0; i < count; i++) {
     const event = generateEvent();
-    event.title = event.title + " " + i;
+    event.title = event.title + ' ' + i;
     ret.push(event);
   }
   return ret;
@@ -148,16 +148,16 @@ const addUsersToEvents = async (count) => {
 // ========================================================================== //
 
 // error handling
-db.on("error", (err) => err);
+db.on('error', (err) => err);
 
-db.once("open", async () => {
+db.once('open', async () => {
   // start by emptying the database
   await User.deleteMany({});
   await Event.deleteMany({});
 
   // generate the users we want
   const users = generateManyUsers(USER_COUNT);
-  console.info("Users generated:");
+  console.info('Users generated:');
   console.table(users);
 
   const promises = [];
@@ -169,13 +169,13 @@ db.once("open", async () => {
 
   // generate the events
   const events = generateManyEvents(EVENT_COUNT);
-  console.info("Events generated");
+  console.info('Events generated');
   console.table(events);
 
   // insert them into the database
   await Event.collection.insertMany(events);
 
-  console.info("adding users to the events");
+  console.info('adding users to the events');
   await addUsersToEvents(EVENT_SUBSCRIPTION);
 
   // seeding complete exit node

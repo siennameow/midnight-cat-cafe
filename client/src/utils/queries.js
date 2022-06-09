@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 // returns an array of events that the user has joined
 export const GET_MY_EVENTS = gql`
@@ -35,6 +35,7 @@ export const GET_EVENTS = gql`
       title
       time
       image
+      description
     }
   }
 `;
@@ -45,6 +46,8 @@ export const GET_EVENT = gql`
     event(title: $title) {
       title
       time
+      image
+      description
       users {
         username
       }
