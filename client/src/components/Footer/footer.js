@@ -51,10 +51,10 @@ function Footer () {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-sm-7">
-                            <p className="mb-0 f_400">© Midnight Cafe Inc.. 2022 All rights reserved.</p>
+                            <p className="mb-0 f_400">© Midnight Cat Cafe Inc.. 2022 All rights reserved.</p>
                         </div>
                         <div className="col-lg-6 col-sm-5 text-right">
-                            <p>Made with <i class="icon_heart"></i> in <a href="http://cakecounter.com" target="_blank" rel="noreferrer">CakeCounter</a></p>
+                            <p>Made with 💜 by <a href="https://github.com/jvbridge/midnight-cat-cafe" target="_blank" rel="noreferrer"> J. L. C. S</a></p>
                         </div>
                     </div>
                 </div>
