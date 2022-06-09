@@ -49,10 +49,11 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addEvent: async (parent, { title, time }) => {
+    addEvent: async (parent, { title, time, image }) => {
       const newEvent = {
         title,
         time: new Date(time),
+        image,
       };
       return Event.create(newEvent);
     },

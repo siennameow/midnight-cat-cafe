@@ -34,6 +34,7 @@ export const GET_EVENTS = gql`
     events {
       title
       time
+      image
     }
   }
 `;

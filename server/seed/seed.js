@@ -15,7 +15,8 @@ const EVENT_COUNT = 20;
 const EVENT_SUBSCRIPTION = 3;
 // the password the dummy  users will all use are the same
 const PASSWORD = "password";
-
+// the name of the image passed in
+const IMAGE = "image.png";
 // ========================================================================== //
 // Functions
 // ========================================================================== //
@@ -99,7 +100,7 @@ const generateEvent = () => {
   );
   const time = randomDate(new Date(), oneYearFromNow);
 
-  return { title, time, users: [] };
+  return { title, time, users: [], image: IMAGE };
 };
 
 /**
