@@ -1,6 +1,13 @@
 import React from "react";
 import "../Footer/footer.css"
 import Logo from '../../assets/logo1.png'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons' 
+library.add(faFacebookF); 
+library.add(faLinkedin); 
+library.add(faGithub); 
+library.add(faTwitter); 
 
 function Footer () {
     return (
@@ -23,10 +30,10 @@ function Footer () {
                             <div className="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style={{visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeInLeft'}}>
                                 <h3 className="f-title f_600 t_color f_size_18">Follow Us</h3>
                                 <div className="f_social_icon">
-                                    <a href="/" className="fab fa-facebook"> </a>
-                                    <a href="/" className="fab fa-twitter"> </a>
-                                    <a href="/" className="fab fa-linkedin"> </a>
-                                    <a href="/" className="fab fa-pinterest"> </a>
+                                    <a href="/" > <FontAwesomeIcon icon={['fab', 'facebook-f']} /></a> 
+                                    <a href="/"> <FontAwesomeIcon icon={["fab", "linkedin"]} /></a>
+                                    <a href="https://github.com/jvbridge/midnight-cat-cafe"> <FontAwesomeIcon icon={["fab", "github"]} /></a>
+                                    <a href="/"> <FontAwesomeIcon icon={["fab", "twitter"]} /></a>
                                 </div>
                             </div>
                         </div>
