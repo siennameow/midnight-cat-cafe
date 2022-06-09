@@ -1,7 +1,7 @@
-const { signToken } = require("../util/auth");
-const { User, Event } = require("../models");
-const { AuthenticationError } = require("apollo-server-express");
-const { events } = require("../models/user");
+const { signToken } = require('../util/auth');
+const { User, Event } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { events } = require('../models/user');
 
 const resolvers = {
   Query: {
@@ -15,19 +15,19 @@ const resolvers = {
       if (context.user) {
         return User.findById({ _id: context.user._id });
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
     events: async () => {
-      return Event.find({}).populate("users");
+      return Event.find({}).populate('users');
     },
     event: async (parent, { title }) => {
-      return Event.findOne({ title }).populate("users");
+      return Event.findOne({ title }).populate('users');
     },
     getMyEvents: async (parent, args, context) => {
       if (context.user) {
         return Event.find({ users: context.user._id });
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
   Mutation: {
@@ -39,36 +39,37 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
-        throw new AuthenticationError("No user found with this email address");
+        throw new AuthenticationError('No user found with this email address');
       }
       const isCorrectPassword = await user.isCorrectPassword(password);
 
       if (!isCorrectPassword) {
-        throw new AuthenticationError("Incorrect credentials");
+        throw new AuthenticationError('Incorrect credentials');
       }
       const token = signToken(user);
       return { token, user };
     },
-    addEvent: async (parent, { title, time, image }) => {
+    addEvent: async (parent, { title, time, image, description }) => {
       const newEvent = {
         title,
         time: new Date(time),
         image,
+        description,
       };
       return Event.create(newEvent);
     },
     deleteMe: async (parent, args, context) => {
       if (context.user) {
         await User.findByIdAndDelete(context.user._id);
-        return "User deleted";
+        return 'User deleted';
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
     addMeToEvent: async (parent, { title }, context) => {
       if (context.user) {
-        const event = await Event.findOne({ title }).populate("users");
+        const event = await Event.findOne({ title }).populate('users');
         if (!event) {
-          throw new UserInputError("No event of that title found");
+          throw new UserInputError('No event of that title found');
         }
         // if we aren't in the event already add us to it
         if (event.users.indexOf(context.user) > -1) {
@@ -76,20 +77,20 @@ const resolvers = {
         }
         return event.save();
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
     removeMeFromEvent: async (parent, { title }, context) => {
       if (context.user) {
-        const event = await Event.findOne({ title }).populate("users");
+        const event = await Event.findOne({ title }).populate('users');
         if (!event) {
-          throw new UserInputError("No event of that title found");
+          throw new UserInputError('No event of that title found');
         }
         event.users = event.users.filter(
           (user) => user._id != context.user._id
         );
         return event.save();
       }
-      throw new AuthenticationError("You need to be logged in!");
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };
