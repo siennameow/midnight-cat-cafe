@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
-// import Auth from "../utils/auth";
 import '../components/menu/menu.css'
 
 const menuItems = require("../components/menu/menu-items.json");
 
 const Menu = () => {
-  const [show, setShow] = useState(false)
-  const [image, setImage] = useState() 
-  // const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-  // if (!token) {
-  //   return false;
-  // }
+  const [show, setShow] = useState(false);
+  const [image, setImage] = useState();
 
   return (
     <>
