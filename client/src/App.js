@@ -15,7 +15,7 @@ import Events from "./pages/Events";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Shopping from "./pages/Shopping";
-
+import Footer from "./components/Footer/footer"
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -48,6 +48,7 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/events" element={<Events />} />
           </Routes>
+          <Footer />
         </>
       </Router>
     </ApolloProvider>
