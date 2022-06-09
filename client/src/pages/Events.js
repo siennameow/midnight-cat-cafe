@@ -8,6 +8,7 @@ function Event() {
   const { loading, data } = useQuery(GET_EVENTS, {
     fetchPolicy: 'no-cache',
   });
+
   let idCounter = 0;
   return (
     <div>
@@ -20,14 +21,15 @@ function Event() {
         <div className="px-8">
           <EventCard
             events={data.events.map((event) => {
+              console.log('formatting event: ', event);
               // some time parsing for our string from the database
               const parseDate = new Date(Number.parseInt(event.time));
               const time = parseDate.toLocaleString();
               // constructing the return item
               const tmp = {
-                id: idCounter,
+                key: idCounter,
                 title: event.title,
-                description: 'temporary description',
+                description: event.description,
                 time,
               };
               // update the id counter
@@ -39,6 +41,7 @@ function Event() {
               } else {
                 tmp.src = defaultImage;
               }
+              console.log('pushing item: ', tmp);
               return tmp;
             })}
           />
