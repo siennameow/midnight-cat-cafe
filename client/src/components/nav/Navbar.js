@@ -48,12 +48,12 @@ const AppNavbar = () => {
           <Tab.Container defaultActiveKey='login'>
             <Modal.Header>
               <Modal.Title>
-                <Nav variant="pills">
+                <Nav className="pills">
                   <Nav.Item>
-                    <Nav.Link eventKey='login'>Login</Nav.Link>
+                    <Nav.Link className="link" eventKey='login'>Login</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                    <Nav.Link className="link" eventKey='signup'>Sign Up</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Modal.Title>

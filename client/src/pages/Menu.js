@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Card, Row, Col, Button } from "react-bootstrap";
 // import Auth from "../utils/auth";
+import '../components/menu/menu.css'
 
 const menuItems = require("../components/menu/menu-items.json");
 
@@ -27,17 +28,18 @@ const Menu = () => {
                     <Card.Subtitle className="mb-2 text-muted">
                       ${item.price}
                     </Card.Subtitle>
-                    <Card.Text>{item.description}</Card.Text>
+                    <Card.Text><i>{item.description}</i></Card.Text>
                   </Card.Body>
+                 <center>
                   <Button
-                    variant="primary"
+                    className="primary"
                     onClick={() => {
                       setShow(true)
                       setImage(item.image)
                     }} 
                   >
                     View
-                  </Button>
+                  </Button></center>
                 </Card>
               );
             })}
