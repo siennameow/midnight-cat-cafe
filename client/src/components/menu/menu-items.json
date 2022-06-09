@@ -68,5 +68,13 @@
         "description": "Sweet and scrumptious. Choice of Chocolate and Nutella, Pistachio and White Chocolate, Salted Caramel, Meyer Lemon, or Mango.",
         "price": "1.99",
         "image": "https://m.media-amazon.com/images/I/61Y9PGMO2WL._SL1500_.jpg"
+    },
+    {
+        "id": "11",
+        "name":"Dairy substitution: Plant Based Milk",
+        "description": "Oatmilk, Almond milk, Hemp milk, Flax Milk, Soy milk.",
+        "price": " +0.99 (additional charge)",
+        "image": "https://cdn.livekindly.co/wp-content/uploads/2020/09/vegan-plant-based-news-plant-milk-livekindly.png"
+
     }
 ]

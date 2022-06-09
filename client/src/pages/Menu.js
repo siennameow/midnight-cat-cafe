@@ -16,7 +16,7 @@ const Menu = () => {
 
   return (
     <>
-      <h1 style={{textAlign: "center", paddingTop: "1%", paddingBottom: "1%"}}>Menu</h1>
+      <h1 className="h1-font" style={{textAlign: "center", paddingTop: "1%", paddingBottom: "1%"}}>Menu</h1>
       <Container style={{}}>
         <Row>
           <Col md={6}>

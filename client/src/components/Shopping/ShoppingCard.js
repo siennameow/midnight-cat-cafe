@@ -10,8 +10,8 @@ return(
 <center><div className="card text-center" style={{backgroundColor: "#eeebf5", maxHeight: 650, maxWidth: 400}}>
 <center><img src={item.src} className="card-img-top" alt={item.name} style={{width:300 }}/></center>
   <div className="card-body">
-  <h5 className="card-title">{item.name}</h5>
-    <p className="card-text">{item.description}</p>
+  <h5 className="card-title">{item.name} <br/><br/>{item.price} </h5>
+    <p className="card-text">{item.description} </p>
     <button className="btn text-light" style={{backgroundColor: "#5e4e85"}}>Buy this</button>
   </div>
 </div></center>
