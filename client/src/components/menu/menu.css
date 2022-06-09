@@ -1,0 +1,11 @@
+.primary {
+    background-color: #5B4B8A !important;
+    width: 30%;
+    color: white !important;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 3em;
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

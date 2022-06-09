@@ -22,3 +22,22 @@
     padding: 10px;
     color: #363062 !important; 
 }
+
+.pills {
+background-color: none !important;
+color: white !important;
+font-weight: 500;
+padding: 12px;
+border-radius: 3em;
+font-size: 22px;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.link {
+    color: #30154e !important;
+}
+
+.link:hover {
+    background-color: #363062;
+    color: #ffffff !important;
+}
