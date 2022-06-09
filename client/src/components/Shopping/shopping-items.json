@@ -23,7 +23,7 @@
     {
       
       "src": "https://cdn02.pinkoi.com/product/1zzyRzWM/0/220x220.jpg",
-      "name":"BLACK CAT Coffee beans",
+      "name":"BLACK CAT Coffee Beans",
       "description": "Two bean blend roasted with heartiest nut, chocolate, smoke characteristics. Rich, Full. ",
       "price": "$13.99"
     },
@@ -39,6 +39,48 @@
       "src": "https://cdn.shopify.com/s/files/1/0531/7627/1005/products/il_fullxfull.3876056519_juvq_695x695.jpg?v=1651732076",
       "name":"Silver Chain Sphynx Cat Top",
       "description": "This necklace top gets your purry pal feline festive for all the fun and shines in the twilight",
+      "price": "$29.99"
+    },
+    {
+      "id": 7,
+      "src": "https://sc04.alicdn.com/kf/HTB1esfEMIbpK1RjSZFyq6x_qFXaJ.jpg",
+      "name":"Coffee Cat Spoon",
+      "description": "Mini cute Creative Ice Cream Dessert Coffee Cat Spoon Custom Metal Coffee Hanging Spoon",
+      "price": "$14.99"
+    },
+    {
+      "id": 8,
+      "src": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR7bh7l71OjuVE9dHG-O3h2L_bC1Ppoba0GUlrc3Q7R__ZMODfkETJxxNIHa-KAnBW2QCIw6FwWkhz-TB2nUP7A_5Ay73WIzXLaOjiyjlmNvrOrTs5OXAZ6nQ&usqp=CAE",
+      "name":"Decaff Cat Sticker",
+      "description": "Decorate and personalize laptops, windows, and more. Removable, kiss-cut vinyl stickers",
+      "price": "$3.99"
+    },
+    {
+      "id": 9,
+      "src": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ7QkyLEZ47Ovr7t7ncUUk1VKwQd9W_-BYfc9zK1zURClEZJKIXc7-1J4Yl30qmq2HFe8RxoXgeC41vNRZc3e3J6iD7QG9e2xUA0ol2Hww-fguMC7wr5SiNZR4&usqp=CAE",
+      "name":"Multicolored Cat Coffee Mug",
+      "description": "Enjoy a cup of hot coffee, tea, or cocoa with Midnight Cat in this 'multicolored cat Midnight' mug!",
+      "price": "$17.99"
+    },
+    {
+      "id": 10,
+      "src": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTXlOwLrOitUzUO0q6XHwbQ9rU4jJFnD7wCXHwHnWSdJGhj9m_9aWjmdjcCml6XaBTfSNvZoaxootkYg3YHg86DVluuGa8r&usqp=CAY",
+      "name":" Womens Cotton T-Shirt",
+      "description": "A matcha latte, a strawberry frappe, a latte kitty. Show off your Midnight vibes with this adorable pattern! ",
+      "price": "$19.99"
+    },
+    {
+      "id": 11,
+      "src": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSx78VXf-CdmSgUcUUkOwTH31IlD2ytLu5vQr1W3dFNv5hsxxu7PUJMb27Ot5lHgStDlqA_rciVY3xJu84EIeg6rY4rhXvG8AvuoutwXuqB",
+      "name":"Cute Kitty Night Light",
+      "description": "The Cat Night Light adds warmth and soft light to any room. The sweet face will surely warm your heart too.",
+      "price": "$24.99"
+    },
+    {
+      "id": 12,
+      "src": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSifgy-8VWeiv44J61EK-h9IMIGayunzQBVWkqUOf2RElCho2oTMLIVTDGMq-7zwYLmhOFnWdNw5XBMpY0SzSnV5j0rC61MV1Y0k19MZnV9&usqp=CAE",
+      "name":"Cat Vases Luxury Minimalist",
+      "description": "This cute vase is made with ceramic material. It help with lighting up your living space and great gift for cat lovers. ",
       "price": "$29.99"
     }
     ]
