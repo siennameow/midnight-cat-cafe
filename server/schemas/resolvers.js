@@ -71,8 +71,14 @@ const resolvers = {
         if (!event) {
           throw new UserInputError('No event of that title found');
         }
-        // if we aren't in the event already add us to it
-        if (event.users.indexOf(context.user) > -1) {
+        let inEvent = false;
+        event.users.forEach((usr) => {
+          if (usr.username == context.user.username) {
+            inEvent = true;
+          }
+        });
+        if (!inEvent) {
+          console.log('event.users: ', event.users);
           event.users.push(context.user);
         }
         return event.save();
