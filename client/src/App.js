@@ -10,12 +10,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Navbar from './components/nav/Navbar';
+import Navbar from "./components/nav/Navbar";
 import Events from "./pages/Events";
+import Event from "./pages/Event";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
 import Shopping from "./pages/Shopping";
-import Footer from "./components/Footer/footer"
+import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer/footer";
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -42,11 +44,12 @@ function App() {
         <>
           <Navbar />
           <Routes>
-             <Route path="/" element={<Home />} /> 
-            {/* <Route path="/register" element={<Register />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path="/shopping" element={<Shopping />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events/:title" element={<Event />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </>

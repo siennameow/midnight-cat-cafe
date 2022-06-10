@@ -1,5 +1,7 @@
 import React from 'react';
 import '../Event/event.css';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 function EventCard({ info }) {
   return (
@@ -16,9 +18,9 @@ function EventCard({ info }) {
           <i>{info.description}</i>
         </p>
         <p className="card-text text-dark">{info.time}</p>
-        <a href="/" className="btn btn-warning">
-          See event detail
-        </a>
+        <Link to={'/Events/' + info.title}>
+          <Button className="btn btn-warning">See event detail</Button>
+        </Link>
       </div>
     </div>
   );
