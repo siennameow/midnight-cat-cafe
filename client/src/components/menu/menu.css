@@ -17,3 +17,26 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .primary{
+    width: 35%;
+    }
+
+    .card-img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 80%;
+    }
+
+    .card-2 {
+    width: 80% !important;
+    text-align: center;
+    display: flex;
+    flex-wrap:wrap;
+    }
+
+     }

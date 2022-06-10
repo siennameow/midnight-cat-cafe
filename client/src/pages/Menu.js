@@ -42,10 +42,10 @@ const Menu = () => {
           <Col md={6} style={{position: "fixed", right: "0px"}}>
           {
             show && 
-            <Card style={{height: "500px", width: "500px" }}>
-              <Card.Img src={image} style={{height: "100%", width: "100%" }}/>
+            <Card className="card-img" style={{height: "500px", width: "500px" }}>
+              <Card.Img className="card-2" src={image} style={{height: "100%", width: "100%" }}/>
               <Card.ImgOverlay>
-                <button onClick={() => setShow(false)} style={{color: "purple", float: "right", margin: "25px", padding: "0px"}}><p style={{margin: "5px"}}>X</p></button>
+                <button className="button-img" onClick={() => setShow(false)} style={{backgroundColor: "white", color: "purple", padding: "2px"}}><p style={{margin: "5px"}}>[x]</p></button>
               </Card.ImgOverlay>
             </Card>
           }
