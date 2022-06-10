@@ -12,6 +12,18 @@ function Event(props) {
     variables: { title },
   });
 
+  const getSignedUp = () => {
+    let signedUp = false;
+    const profile = auth.getProfile();
+    const username = profile.data.username;
+    data.event.users.forEach((element) => {
+      console.log('checking if the username matches: ', element.username);
+      console.log('profile:  ', profile);
+      if (element.username === username) signedUp = true;
+    });
+    return signedUp;
+  };
+
   return loading ? (
     <div>Loading...</div>
   ) : (
@@ -25,10 +37,7 @@ function Event(props) {
         return <h3>{user.username}</h3>;
       })}
       {auth.loggedIn() ? (
-        <SignUpButton
-          title={title}
-          signedUp={data.event.users.includes(auth.getProfile().data.username)}
-        />
+        <SignUpButton title={title} signedUp={getSignedUp()} />
       ) : (
         <div>You need to be logged in to sign up for this event!</div>
       )}

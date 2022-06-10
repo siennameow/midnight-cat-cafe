@@ -4,7 +4,8 @@ import { useMutation } from '@apollo/client';
 import { ADD_ME_TO_EVENT, REMOVE_ME_FROM_EVENT } from '../../utils/mutations';
 
 function SignUpButton({ title, signedUp }) {
-  const [addTo, { error: addError }] = useMutation(ADD_ME_TO_EVENT);
+  const [addTo, { error: addError, loading: addLoading }] =
+    useMutation(ADD_ME_TO_EVENT);
   const [removeFrom, { error: removeError }] =
     useMutation(REMOVE_ME_FROM_EVENT);
 
