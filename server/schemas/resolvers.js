@@ -78,7 +78,6 @@ const resolvers = {
           }
         });
         if (!inEvent) {
-          console.log('event.users: ', event.users);
           event.users.push(context.user);
         }
         return event.save();
