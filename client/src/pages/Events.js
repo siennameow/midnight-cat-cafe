@@ -40,7 +40,6 @@ function Event() {
             } else {
               tmp.src = defaultImage;
             }
-            console.log('pushing item: ', tmp);
             return <EventCard info={tmp} />;
           })}
         </div>
