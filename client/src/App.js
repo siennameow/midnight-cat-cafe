@@ -1,31 +1,32 @@
-import React from "react";
+import React from 'react';
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from './components/nav/Navbar';
-import Events from "./pages/Events";
-import Home from "./pages/Home";
-import Menu from "./pages/Menu";
-import Shopping from "./pages/Shopping";
-import Footer from "./components/Footer/footer"
+import Events from './pages/Events';
+import Event from './pages/Event';
+import Home from './pages/Home';
+import Menu from './pages/Menu';
+import Shopping from './pages/Shopping';
+import Footer from './components/Footer/footer';
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("id_token");
+  const token = localStorage.getItem('id_token');
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : "",
+      authorization: token ? `Bearer ${token}` : '',
     },
   };
 });
@@ -42,11 +43,12 @@ function App() {
         <>
           <Navbar />
           <Routes>
-             <Route path="/" element={<Home />} /> 
+            <Route path="/" element={<Home />} />
             {/* <Route path="/register" element={<Register />} /> */}
             <Route path="/shopping" element={<Shopping />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/events/:id" element={<Event />} />
           </Routes>
           <Footer />
         </>
