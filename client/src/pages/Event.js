@@ -1,13 +1,10 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { GET_EVENT } from '../utils/queries';
-import { ADD_ME_TO_EVENT, REMOVE_ME_FROM_EVENT } from '../utils/mutations';
-import { useQuery, useMutation } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { Button } from 'react-bootstrap';
-
-const handleAdd = () => {
-  // TODO; use mutation
-};
+import SignUpButton from '../components/Event/SignUpButton';
+import auth from '../utils/auth';
 
 function Event(props) {
   const { title } = useParams();
@@ -19,7 +16,6 @@ function Event(props) {
     <div>Loading...</div>
   ) : (
     <div className="container">
-      {console.log(data)}
       <h1>{data.event.title}</h1>
       <Link to="/Events">
         <Button>Go back to the main list!</Button>
@@ -28,7 +24,14 @@ function Event(props) {
       {data.event.users.map((user) => {
         return <h3>{user.username}</h3>;
       })}
-      <Button>Add me to the event!</Button>
+      {auth.loggedIn() ? (
+        <SignUpButton
+          title={title}
+          signedUp={data.event.users.includes(auth.getProfile().data.username)}
+        />
+      ) : (
+        <div>You need to be logged in to sign up for this event!</div>
+      )}
     </div>
   );
 }
