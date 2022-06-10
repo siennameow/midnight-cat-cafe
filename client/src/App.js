@@ -48,7 +48,7 @@ function App() {
             <Route path="/shopping" element={<Shopping />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/events/:id" element={<Event />} />
+            <Route path="/events/:title" element={<Event />} />
           </Routes>
           <Footer />
         </>
