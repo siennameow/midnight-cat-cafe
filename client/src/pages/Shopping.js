@@ -22,7 +22,24 @@ function Shopping() {
   };
 
   const increaseQuantity = i => {
-//setCart to increase the count
+    setCart(prevCart =>
+      prevCart.map((item, o) => {
+        if (i === o && item.inCart) {
+          if (item.count > 9) {
+            return item;
+          } else return { ...item, count: item.count + 1 };
+        } else if (i === o) {
+          if (item.counterVal > 9) {
+            return item;
+          } else
+            return {
+              ...item,
+              counterVal: item.counterVal + 1
+            };
+        }
+        return item;
+      })
+    );
   };
 
   const decreaseQuantity = i => {
