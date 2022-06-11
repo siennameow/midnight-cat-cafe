@@ -114,6 +114,27 @@ function Shopping() {
     </>
   );
 
+  const cartItems = cart.map((item, i) => (
+    <React.Fragment key={item.name}>
+      {item.inCart && (
+        <>
+          <div style={{fontSize:"12px"}}> 
+          <button onClick={() => removeFromCart(i)}></button>
+            <button onClick={() => decreaseQuantity(i)}>-</button>{" "}
+            {item.count} <button onClick={() => increaseQuantity(i)}>+</button>
+            {item.name} 
+            {' '}Subtotal: $
+            {Number.isInteger(item.count * item.price)
+              ? item.count * item.price
+              : `${(item.count * item.price).toFixed(2)}`}
+               </div>
+    
+          <hr />
+        </>
+      )}
+    </React.Fragment>
+  ));
+
   const cartProducts = () => (
     <div>
     <div style={{gap: "10px", margin:"20px"}} className="flex-wrap d-flex justify-content-center">
@@ -174,6 +195,7 @@ function Shopping() {
     <div>
       <center>
       {cartTotals()}
+      {cartItems}
       {cartProducts()}
       </center>
     </div>
