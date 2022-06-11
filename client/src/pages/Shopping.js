@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "../components/Shopping/shopping.css";
 import PRODUCTS from "../components/Shopping/shopping-items.json";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faMinus, faTrashAlt, faPlus, faCartPlus, faCreditCard } from "@fortawesome/free-solid-svg-icons"; 
+library.add(faMinus);
+library.add(faTrashAlt);
+library.add(faPlus);
+library.add(faCartPlus);
+library.add(faCreditCard);
 
 
 function Shopping() {
@@ -101,13 +109,13 @@ function Shopping() {
       alt="cart"
       height="80"
     ></img> 
-    </div>
-        <p>
-          Total Price: $
+              Total Price: $
           {Number.isInteger(cartPriceTotal)
             ? cartPriceTotal
             : cartPriceTotal.toFixed(2)}{' '}
-            <button className="btn">Checkout</button>
+    </div>
+        <p>
+            <button className="btn"><FontAwesomeIcon icon="fas fa-credit-card" style={{marginRight:"10px"}} />Checkout</button>
         </p>
         </div>
       </b>
@@ -119,10 +127,11 @@ function Shopping() {
       {item.inCart && (
         <>
           <div style={{fontSize:"12px"}}> 
-          <button onClick={() => removeFromCart(i)}></button>
-            <button onClick={() => decreaseQuantity(i)}>-</button>{" "}
-            {item.count} <button onClick={() => increaseQuantity(i)}>+</button>
-            {item.name} 
+          <span onClick={() => removeFromCart(i)}><FontAwesomeIcon className="fa-lg" style={{color:"#7847ad", marginRight:"10px"}} icon="fas fa-trash-alt"/></span>
+            <span onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></span>{" "}
+           <span style={{marginLeft:"10px", marginRight:"10px", backgroundColor:"#cdc3d9"}}> {' '}{item.count}{' '} </span>
+            <span  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></span>
+            <span style={{marginLeft:"10px", marginRight:"10px"}}> {' '}{item.name} {' '} </span>
             {' '}Subtotal: $
             {Number.isInteger(item.count * item.price)
               ? item.count * item.price
@@ -170,12 +179,12 @@ function Shopping() {
             </p>
           {!item.inCart ? (
             <>
-              <button onClick={() => decreaseQuantity(i)}>-</button>
-              <input style={{width: "6%", marginBottom: "10px"}} readOnly type="text" value={item.counterVal} ></input>
+              <span onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></span>
+              <input style={{width: "10%", marginBottom: "10px", border:"none", textAlign:"center"}} readOnly type="text" value={item.counterVal} ></input>
 
-              <button  onClick={() => increaseQuantity(i)}>+</button>
+              <span  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></span>
               <br />
-              <button className="btn" onClick={() => addToCart(i)}>{' '}Add To Cart</button>
+              <button className="btn" onClick={() => addToCart(i)}><FontAwesomeIcon icon="fas fa-cart-plus" />{' '}Add To Cart</button>
             </>
           ) : (
             <p>
