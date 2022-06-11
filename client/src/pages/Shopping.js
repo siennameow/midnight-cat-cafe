@@ -43,7 +43,23 @@ function Shopping() {
   };
 
   const decreaseQuantity = i => {
-//setCart to decrease the count
+    setCart(prevCart =>
+      prevCart.map((item, o) => {
+        if (i === o && item.inCart) {
+          if (item.count > 1) {
+            return { ...item, count: item.count - 1 };
+          } else {
+            return item;
+          }
+        } else if (i === o && item.counterVal > 1) {
+          return {
+            ...item,
+            counterVal: item.counterVal - 1
+          };
+        }
+        return item;
+      })
+    );
   };
 
   const removeFromCart = i => {
