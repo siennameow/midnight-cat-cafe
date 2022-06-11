@@ -1,14 +1,28 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 import logo from "../../assets/images/logo1.png";
+import Swal from 'sweetalert2'
+import nyan from "../../assets/images/nyan.gif"
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = "pk_test_sLUqHXtqXOkwSdPosC8ZikQ800snMatYMb";
 
-  const onToken = (token) => {
-    console.log(token);
-    alert("Payment Successful!");
+    const onToken = token => {
+        console.log(token);
+        Swal.fire({
+            title: 'Payment Successful!',
+            width: 300,
+            height: 50,
+            color: '#716add',
+            background: '#fff',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url(${nyan})
+              left top
+              no-repeat
+            `
+          })
   };
 
   return (
