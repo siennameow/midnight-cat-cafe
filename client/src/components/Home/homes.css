@@ -31,7 +31,9 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 .card-1 {
     border: none !important;
+
 }
+
 p {
     margin-top: 20px;
     justify-content: center !important;
@@ -45,16 +47,29 @@ p {
 
 
 .legend-1 {
-    position: absolute;
-    top: 40%;
-    left: 40%;
     color: #f8f5f9;
-    justify-content: center;
-    font-size: 40px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    display: flexbox;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     background-color: none !important;
 
+}
+
+@media (max-width: 767px) {
+    .legend-1 {
+        width: 100%;
+        position: absolute;
+        left: 2% !important;
+        flex-direction: column;
+        font-size: 25px;
+        align-items: center !important;
+  }
 }
 
 img { 
