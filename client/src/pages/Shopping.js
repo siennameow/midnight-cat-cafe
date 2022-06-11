@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../components/Shopping/shopping.css";
+import StripeCheckoutButton from '../components/Shopping/stripe';
 import PRODUCTS from "../components/Shopping/shopping-items.json";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -110,17 +111,22 @@ function Shopping() {
       alt="cart"
       height="80"
     ></img> 
-              Total Price: $
-          {Number.isInteger(cartPriceTotal)
-            ? cartPriceTotal
-            : cartPriceTotal.toFixed(2)}{' '}
-    </div>
+</div>
+          <p>
+            Total Price: $
+            {Number.isInteger(cartPriceTotal)
+              ? cartPriceTotal
+              : cartPriceTotal.toFixed(2)}{' '}
+              {/* <button className="btn" >Checkout</button> */}
+              <div className="payment">
         <p>
-            <button className="btn"><FontAwesomeIcon icon="fas fa-credit-card" style={{marginRight:"10px"}} />Checkout</button>
+          <StripeCheckoutButton price={cartPriceTotal} />
         </p>
-        </div>
-      </b>
-    </>
+    </div>
+          </p>
+          </div>
+        </b>
+      </>
   );
 
   const cartItems = cart.map((item, i) => (
