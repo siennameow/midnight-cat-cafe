@@ -96,7 +96,8 @@ function Shopping() {
   cartCountTotal === 0 ? (
     <b style={{color:"#5B4B8A", fontSize: "28px"}}>
       <p>Shopping for Midnight Cat products</p>
-    <p>Cart is empty</p></b>
+    <p>Cart is empty</p>
+    <img src="https://thumbs.gfycat.com/ReasonableConsiderateGoldeneye-max-1mb.gif" alt="empty" height="70px"></img></b>
   ) : (
     <>
       <b>
@@ -126,11 +127,11 @@ function Shopping() {
     <React.Fragment key={item.name}>
       {item.inCart && (
         <>
-          <div style={{fontSize:"12px"}}> 
-          <span onClick={() => removeFromCart(i)}><FontAwesomeIcon className="fa-lg" style={{color:"#7847ad", marginRight:"10px"}} icon="fas fa-trash-alt"/></span>
-            <span onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></span>{" "}
+          <div style={{fontSize:"16px"}}> 
+          <button style={{border:"none", backgroundColor:"#ffffff"}} onClick={() => removeFromCart(i)}><FontAwesomeIcon className="fa-lg" style={{color:"#7847ad", marginRight:"10px"}} icon="fas fa-trash-alt"/></button>
+            <button style={{border:"none", backgroundColor:"#ffffff"}} onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></button>{" "}
            <span style={{marginLeft:"10px", marginRight:"10px", backgroundColor:"#cdc3d9"}}> {' '}{item.count}{' '} </span>
-            <span  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></span>
+            <button style={{border:"none", backgroundColor:"#ffffff"}}  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></button>
             <span style={{marginLeft:"10px", marginRight:"10px"}}> {' '}{item.name} {' '} </span>
             {' '}Subtotal: $
             {Number.isInteger(item.count * item.price)
@@ -179,17 +180,22 @@ function Shopping() {
             </p>
           {!item.inCart ? (
             <>
-              <span onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></span>
+              <button style={{border:"none"}} onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></button>
               <input style={{width: "10%", marginBottom: "10px", border:"none", textAlign:"center"}} readOnly type="text" value={item.counterVal} ></input>
 
-              <span  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></span>
+              <button style={{border:"none"}}  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></button>
               <br />
               <button className="btn" onClick={() => addToCart(i)}><FontAwesomeIcon icon="fas fa-cart-plus" />{' '}Add To Cart</button>
             </>
           ) : (
+            <div>
+           <p><img src="https://media1.giphy.com/media/4PUkqN8QQsaFIkqi8a/giphy.gif?cid=790b761109561ad615e61cf0659c7078a6e77df7205b3c88&rid=giphy.gif&ct=s" alt="succeed" height="50px"></img></p>
             <p>
-              <b>Item added!</b>
+              <b>
+              Item added!</b>
             </p>
+
+            </div>
           )}
           </div>
         </div>
