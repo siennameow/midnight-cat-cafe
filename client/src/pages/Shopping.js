@@ -78,12 +78,41 @@ function Shopping() {
     );
   };
 
+  const cartCountTotal = cart.reduce((acc, item) => acc + item.count, 0);
+  const cartPriceTotal = cart.reduce(
+    (acc, item) => acc + item.price * item.count,
+    0
+  );
 
+  const cartTotals = () =>
+  cartCountTotal === 0 ? (
+    <b style={{color:"#5B4B8A", fontSize: "28px"}}>
+      <p>Shopping for Midnight Cat products</p>
+    <p>Cart is empty</p></b>
+  ) : (
+    <>
+      <b>
 
-
-  const cartTotals = () => {
-    //calculate cart totals
-  }
+        <div>
+        <div style={{fontSize: "18px"}}>
+     {cartCountTotal} Items in   
+     <img
+      src="https://media3.giphy.com/media/3WCPjZo9Yslq2Y6coa/giphy.gif?cid=790b76118ee5b9f06146d85c126ba6efd9c596630f4de9d6&rid=giphy.gif&ct=s"
+      alt="cart"
+      height="80"
+    ></img> 
+    </div>
+        <p>
+          Total Price: $
+          {Number.isInteger(cartPriceTotal)
+            ? cartPriceTotal
+            : cartPriceTotal.toFixed(2)}{' '}
+            <button className="btn">Checkout</button>
+        </p>
+        </div>
+      </b>
+    </>
+  );
 
   const cartProducts = () => (
     <div>
