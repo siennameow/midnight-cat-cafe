@@ -63,7 +63,19 @@ function Shopping() {
   };
 
   const removeFromCart = i => {
-//setCart to remove the item
+    setCart(prevCart =>
+      prevCart.map((item, o) => {
+        if (i === o) {
+          return {
+            ...item,
+            count: 0,
+            counterVal: 1,
+            inCart: false
+          };
+        }
+        return item;
+      })
+    );
   };
 
 
