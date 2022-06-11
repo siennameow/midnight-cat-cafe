@@ -127,7 +127,7 @@ function Shopping() {
     <React.Fragment key={item.name}>
       {item.inCart && (
         <>
-          <div style={{fontSize:"16px"}}> 
+          <div style={{fontSize:"14px"}}> 
           <button style={{border:"none", backgroundColor:"#ffffff"}} onClick={() => removeFromCart(i)}><FontAwesomeIcon className="fa-lg" style={{color:"#7847ad", marginRight:"10px"}} icon="fas fa-trash-alt"/></button>
             <button style={{border:"none", backgroundColor:"#ffffff"}} onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></button>{" "}
            <span style={{marginLeft:"10px", marginRight:"10px", backgroundColor:"#cdc3d9"}}> {' '}{item.count}{' '} </span>
