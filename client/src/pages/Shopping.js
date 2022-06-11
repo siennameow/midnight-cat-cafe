@@ -7,7 +7,18 @@ function Shopping() {
   const [cart, setCart] = useState(PRODUCTS);
 
   const addToCart = i => {
-//setCart to update the item detail
+    setCart(prevState =>
+      prevState.map((item, o) => {
+        if (i === o) {
+          return {
+            ...item,
+            inCart: true,
+            count: item.counterVal
+          };
+        }
+        return item;
+      })
+    );
   };
 
   const increaseQuantity = i => {
