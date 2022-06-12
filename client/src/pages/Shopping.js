@@ -187,7 +187,7 @@ function Shopping() {
           {!item.inCart ? (
             <>
               <button style={{border:"none"}} onClick={() => decreaseQuantity(i)}><FontAwesomeIcon icon="fas fa-minus" /></button>
-              <input style={{width: "10%", marginBottom: "10px", border:"none", textAlign:"center"}} readOnly type="text" value={item.counterVal} ></input>
+              <input style={{width: "20%", marginBottom: "10px", border:"none", textAlign:"center"}} readOnly type="text" value={item.counterVal} ></input>
 
               <button style={{border:"none"}}  onClick={() => increaseQuantity(i)}><FontAwesomeIcon icon="fas fa-plus" /></button>
               <br />
