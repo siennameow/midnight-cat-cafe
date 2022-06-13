@@ -39,10 +39,28 @@ one running react, the other running an express server that uses Apollo Graphql
 to serve as the back end. They are on `localhost:3000` and `localhost:3001` 
 respectively.
 
+
+## Usage
+
+The app itself acts like a website for a small store-front cafe. There tabs for
+the menu, purchasing merchandise, events, and making an account to sign up for
+said events. 
+
+The Menu is simply a display of drinks and food items a cafe might sell, with
+prices that are semi-reasonable. They also have images that can be dismissed by 
+clicking/tapping on the red X in the upper left hand corner. 
+
+The shopping/merch tab has ficitonal cat products to buy as well. Unlike the 
+menu we've put in a fake "buy now" interface that uses 
+[stripe](https://stripe.com/) as a payment system, but it doesn't actually do
+anything with the information. 
+
+The events are events linked to the cafe. They are held inside the database and
+hold a list of users as the people who will frequent the event.
+
 ## Links
 
 [Deployed Link](https://midnight-cat-cafe.herokuapp.com/)
-
 
 [Github Repo for Midnight Cat Cafe](https://github.com/jvbridge/midnight-cat-cafe)
 
