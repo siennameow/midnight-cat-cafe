@@ -19,10 +19,25 @@ The home page also has a navbar that allows users to navigate to the Shopping pa
 - [Demo](#demo)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
-- [Github Repo Link](#github-repo-link)
+- [Usage](#usage)
+- [Technology](#technology)
+- [Links](#links)
 - [Authors](#authors)
 - [License](#license)
 - [Credits](#credits)
+- 
+## Demo
+
+
+Desktop Version
+
+![Midnight Cat Cafe (2) copy 2](https://user-images.githubusercontent.com/101283174/173273098-5d8d1415-045b-44c4-902e-763b726f6113.gif)
+
+
+Mobile Version  
+
+![Midnight Cat Cafe (2) copy](https://user-images.githubusercontent.com/101283174/173272894-1ea2bfbe-02ea-42ea-8853-dbaf11221b83.gif)
+
 
 ## Installation
 
@@ -39,7 +54,6 @@ Once those are done, you can see the development environemnt by running
 one running react, the other running an express server that uses Apollo Graphql
 to serve as the back end. They are on `localhost:3000` and `localhost:3001` 
 respectively.
-
 
 ## Usage
 
@@ -63,7 +77,7 @@ just usernames displayed.
 It works by using graphQL to send requests and responses to the database and 
 it updates as appropriate. 
 
-## Technology used
+## Technology
 
 
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) 
