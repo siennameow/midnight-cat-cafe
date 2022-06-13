@@ -21,7 +21,8 @@ The home page also has a navbar that allows users to navigate to the Shopping pa
 - [Installation](#installation)
 - [Github Repo Link](#github-repo-link)
 - [Authors](#authors)
-- [License](#License)
+- [License](#license)
+- [Credits](#credits)
 
 ## Installation
 
