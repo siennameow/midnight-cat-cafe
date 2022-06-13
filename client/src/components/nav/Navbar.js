@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Nav, Container, Modal, Tab } from "react-bootstrap";
-import SignUpForm from "../register/SignupForm";
-import LoginForm from "../register/LoginForm";
-import "../nav/navbar-styles.css";
-import Auth from "../../utils/auth";
-import Logo from "../../assets/images/logo.png";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
+import SignUpForm from '../register/SignupForm';
+import LoginForm from '../register/LoginForm';
+import '../nav/navbar-styles.css';
+import Auth from '../../utils/auth';
+import Logo from '../../assets/images/logo.png';
 const AppNavbar = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -19,8 +19,8 @@ const AppNavbar = () => {
             width="60"
             height="60"
             className="d-inline-block align-top"
-            style={{ marginRight: "2%" }}
-          />{" "}
+            style={{ marginRight: '2%' }}
+          />{' '}
           <Navbar.Brand as={Link} to="/" className="navbrand">
             Midnight Cat Cafe
           </Navbar.Brand>
@@ -30,7 +30,7 @@ const AppNavbar = () => {
               Menu
             </Nav.Link>
             <Nav.Link as={Link} to="/shopping" className="navbrand">
-              Shopping
+              Merch
             </Nav.Link>
             <Nav.Link as={Link} to="/events" className="navbrand">
               Events
