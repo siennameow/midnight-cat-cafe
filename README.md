@@ -5,34 +5,13 @@ An e-commerce website for a small business/fictional cafe called the Midnight Ca
 
 On the home page, users will see a photo on the main body of the page and introduction about the cafe. 
 The home page also has a navbar that allows users to navigate to the Shopping page, Create an Event page, Menu, and Signup page.
-
-
-  
 <p>
     <img src="https://img.shields.io/github/repo-size/jvbridge/midnight-cat-cafe" />
-
-
-
-  
-<p>
     <img src="https://img.shields.io/badge/react-orange" />
     <img src="https://img.shields.io/badge/Express-blue"  />
 </p>
 
-
 ![Top Language](https://img.shields.io/github/languages/top/jvbridge/midnight-cat-cafe)
-
-
-   
-
-## Demo
-
-
-
-
-
-
-
 
 
 ## Table of Contents
