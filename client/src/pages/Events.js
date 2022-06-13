@@ -1,18 +1,18 @@
-import React from 'react';
-import EventCard from '../components/Event/EventCard';
-import { useQuery } from '@apollo/client';
-import { GET_EVENTS } from '../utils/queries';
-import defaultImage from '../assets/images/logo.png';
+import React from "react";
+import EventCard from "../components/Event/EventCard";
+import { useQuery } from "@apollo/client";
+import { GET_EVENTS } from "../utils/queries";
+import defaultImage from "../assets/images/logo.png";
 
 function Event() {
   const { loading, data } = useQuery(GET_EVENTS, {
-    fetchPolicy: 'no-cache',
+    fetchPolicy: "no-cache",
   });
 
   let idCounter = 0;
   return (
     <div>
-      <h1 className="text-center" style={{ color: '#a16b1b' }}>
+      <h1 className="text-center" style={{ color: "#a16b1b" }}>
         Upcoming Event
       </h1>
       {loading ? (
@@ -34,13 +34,17 @@ function Event() {
             // update the id counter
             idCounter++;
             if (event.image) {
-              tmp.src = require('../assets/images/' + event.image);
+              tmp.src = require("../assets/images/" + event.image);
               // in case the image name pulled from the database doesn't exist
               if (!tmp.src) tmp.src = defaultImage;
             } else {
               tmp.src = defaultImage;
             }
-            return <EventCard info={tmp} />;
+            return (
+              <div className="mx-3">
+                <EventCard info={tmp} />
+              </div>
+            );
           })}
         </div>
       )}
