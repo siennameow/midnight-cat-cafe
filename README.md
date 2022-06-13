@@ -81,20 +81,20 @@ Packages installed:
 
 ## Authors
 Sienna
-* [Github] (https://github.com/siennameow)
-* [LinkedIn] (https://www.linkedin.com/in/)
+* [Github](https://github.com/siennameow)
+* [LinkedIn](https://www.linkedin.com/in/hexuanli/)
 
 Jonathan
-* [Github] (https://github.com/jvbridge)
-* [LinkedIn] (https://www.linkedin.com/in/)
+* [Github](https://github.com/jvbridge)
+* [LinkedIn](https://www.linkedin.com/in/jonathan-bridge/)
 
 Lucca
-* [Github] (https://github.com/luccaloopz)
-* [LinkedIn] (https://www.linkedin.com/in/)
+* [Github](https://github.com/luccaloopz)
+* [LinkedIn](https://www.linkedin.com/in/lucca-martins/)
 
 Chaunny
-* [Github] (https://github.com/chaunnybby7)
-* [LinkedIn] (https://www.linkedin.com/in/chauntelleong/)
+* [Github](https://github.com/chaunnybby7)
+* [LinkedIn](https://www.linkedin.com/in/chauntelleong/)
 
 ## License 
 
