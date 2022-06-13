@@ -50,13 +50,30 @@ The Menu is simply a display of drinks and food items a cafe might sell, with
 prices that are semi-reasonable. They also have images that can be dismissed by 
 clicking/tapping on the red X in the upper left hand corner. 
 
-The shopping/merch tab has ficitonal cat products to buy as well. Unlike the 
+The Merch tab has ficitonal cat products to buy as well. Unlike the 
 menu we've put in a fake "buy now" interface that uses 
 [stripe](https://stripe.com/) as a payment system, but it doesn't actually do
 anything with the information. 
 
-The events are events linked to the cafe. They are held inside the database and
-hold a list of users as the people who will frequent the event.
+The Events are events linked to the cafe. They are held inside the database and
+hold a list of users as the people who will frequent the event. Those users are
+just usernames displayed. 
+
+It works by using graphQL to send requests and responses to the database and 
+it updates as appropriate. 
+
+## Technology used
+
+
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) 
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
+![GraphQL](https://img.shields.io/badge/Apollo%20GraphQL-311C87?&style=for-the-badge&logo=Apollo%20GraphQL&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 
 ## Links
 
