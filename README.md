@@ -1,15 +1,11 @@
 # Midnight Cat Cafe
 
 ## Description 
-```
 An e-commerce website for a small business/fictional cafe called the Midnight Cat Café.
 
 On the home page, users will see a photo on the main body of the page and introduction about the cafe. 
 The home page also has a navbar that allows users to navigate to the Shopping page, Create an Event page, Menu, and Signup page.
 
-
-
-```
 
   
 <p>
