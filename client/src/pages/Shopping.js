@@ -101,7 +101,7 @@ function Shopping() {
   const cartTotals = () =>
     cartCountTotal === 0 ? (
       <b style={{ color: '#5B4B8A', fontSize: '28px' }}>
-        <p>Get Your Midnight Cat Merch here!</p>
+        <p>Get Your Midnight Cat Cafe Merch here!</p>
         <p>Cart is empty</p>
         <img
           src="https://thumbs.gfycat.com/ReasonableConsiderateGoldeneye-max-1mb.gif"
