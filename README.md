@@ -25,34 +25,26 @@ The home page also has a navbar that allows users to navigate to the Shopping pa
 
 ## Installation
 
-```
-After cloning down this repository, please run `npm install`.
-```
+To run a local development copy, you are required to have installed 
+[Node.js](https://nodejs.org/), and [Mongo DB](https://www.mongodb.com/). 
 
-```
-Run `npm run build` to build your dist folder.
-```
+Download the repository. After downloading run `npm run install` in the root 
+directory of the repository. It is also recommended for you to run 
+`npm run seed` in order to seed your mongo database with some dummy data for
+events. 
 
-```
-Run `npm run deploy` after you switch to your gh-pages branch to deploy your server.
-```
-Packages installed:
-
-- [x] Bootstrap
-- [x] Express
-- [x] React
-- [x] React-bootstrap
-- [x] React-dom
-- [x] React-router-bootstrap
-- [x] React-router-dom
-
+Once those are done, you can see the development environemnt by running 
+`npm run develop` in the root directory. This will start two Node.js servers,
+one running react, the other running an express server that uses Apollo Graphql
+to serve as the back end. They are on `localhost:3000` and `localhost:3001` 
+respectively.
 
 ## Links
 
-[Deployed Link]()
+[Deployed Link](https://midnight-cat-cafe.herokuapp.com/)
 
 
-[Github Repo for Midnight Cat Cafe]()
+[Github Repo for Midnight Cat Cafe](https://github.com/jvbridge/midnight-cat-cafe)
 
 ## Authors
 Sienna
