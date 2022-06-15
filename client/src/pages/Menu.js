@@ -10,13 +10,14 @@ const Menu = () => {
 
   return (
     <>
-      <h1 className="h1-font" style={{textAlign: "center", paddingTop: "1%", paddingBottom: "1%"}}>Menu</h1>
-      <Container style={{}}>
+    <div className="">
+      <h1 className="h1-font" style={{backgroundColor:"white"}}>Menu</h1>
+      <Container >
         <Row>
           <Col md={6}>
             {menuItems.map((item) => {
               return (
-                <Card key={item.id} style={{marginBottom: "10px"}}>
+                <Card className="menu-card" key={item.id} style={{marginBottom: "10px"}}>
                   <Card.Body>
                     <Card.Title>{item.name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">
@@ -52,6 +53,7 @@ const Menu = () => {
           </Col>
         </Row>
       </Container>
+      </div>
     </>
   );
 };

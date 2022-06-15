@@ -100,23 +100,25 @@ function Shopping() {
 
   const cartTotals = () =>
     cartCountTotal === 0 ? (
-      <b style={{ color: '#5B4B8A', fontSize: '28px' }}>
-        <p>Get Your Midnight Cat Cafe Merch here!</p>
+      <b style={{ color: '#5B4B8A', fontSize: '28px'}}>
+        <div style={{backgroundColor:"white"}}>
+        <p >Get Your Midnight Cat Cafe Merch here!</p>
         <p>Cart is empty</p>
         <img
           src="https://thumbs.gfycat.com/ReasonableConsiderateGoldeneye-max-1mb.gif"
           alt="empty"
           height="70px"
         ></img>
+        </div>
       </b>
     ) : (
       <>
         <b>
-          <div>
-            <div style={{ fontSize: '18px' }}>
+          <div style={{backgroundColor:"white", paddingBottom:10}}>
+            <div style={{ fontSize: '18px'}}>
               {cartCountTotal} Items in
               <img
-                src="https://media3.giphy.com/media/3WCPjZo9Yslq2Y6coa/giphy.gif?cid=790b76118ee5b9f06146d85c126ba6efd9c596630f4de9d6&rid=giphy.gif&ct=s"
+                src="https://images.squarespace-cdn.com/content/v1/5a9d990755b02c16eef28423/1520389843829-87P4SY6YG7J6ZE3N3F1F/animat-shopping-cart-color.gif"
                 alt="cart"
                 height="80"
               ></img>
@@ -139,10 +141,11 @@ function Shopping() {
     );
 
   const cartItems = cart.map((item, i) => (
-    <React.Fragment key={item.name}>
+    <div style={{backgroundColor:"white"}}>
+    <div className="card" key={item.name}>
       {item.inCart && (
         <>
-          <div style={{ fontSize: '14px' }}>
+          <div style={{ fontSize: '14px'}}>
             <button
               style={{ border: 'none', backgroundColor: '#ffffff' }}
               onClick={() => removeFromCart(i)}
@@ -152,7 +155,7 @@ function Shopping() {
                 style={{ color: '#7847ad', marginRight: '10px' }}
                 icon="fas fa-trash-alt"
               />
-            </button>
+            </button>{' '}
             <button
               style={{ border: 'none', backgroundColor: '#ffffff' }}
               onClick={() => decreaseQuantity(i)}
@@ -163,7 +166,7 @@ function Shopping() {
               style={{
                 marginLeft: '10px',
                 marginRight: '10px',
-                backgroundColor: '#cdc3d9',
+                backgroundColor: '#eeebf5',
               }}
             >
               {' '}
@@ -188,7 +191,8 @@ function Shopping() {
           <hr />
         </>
       )}
-    </React.Fragment>
+    </div>
+    </div>
   ));
 
   const cartProducts = () => (
