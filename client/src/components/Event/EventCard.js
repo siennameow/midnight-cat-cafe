@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 
 function EventCard({ info }) {
   return (
-    <div className="card mb-3 text-center g-4">
+    <div className="card mb-3 text-center g-4" style={{ background: "url(https://cdn3.vectorstock.com/i/1000x1000/53/92/purple-watercolor-background-vector-36235392.jpg) no-repeat center center"}}>
       <div className="container justify-center">
         <img
           src={info.src}
