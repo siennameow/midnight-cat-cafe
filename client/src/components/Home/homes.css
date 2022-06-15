@@ -49,15 +49,15 @@ p {
 .legend-1 {
     color: #f8f5f9;
     position: absolute;
-    top: 20%;
+    top: 60%;
     left: 30%;
     display: flexbox;
     justify-content: center !important;
     text-align: center !important;
     font-size: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    background-color: none !important;
+    background-color:#57507f ;
+    opacity: 0.5;
 
 }
 
