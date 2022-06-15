@@ -16,8 +16,8 @@ const AppNavbar = () => {
           <img
             alt="logo"
             src={Logo}
-            width="60"
-            height="60"
+            width="70"
+            height="70"
             className="d-inline-block align-top"
             style={{ marginRight: '2%' }}
           />{' '}
