@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './homes.css'
-
+import home from "../../assets/images/home.jpg"
 
 function Carousels() {
     return(
@@ -10,7 +10,7 @@ function Carousels() {
 
         <Carousel>
         <div>
-            <img src="https://images.xceed.me/restaurants/covers/aubaine-selfridges-restaurant-london-xceedcd8a.jpeg" alt="image1" />
+            <img src={home} alt="image1" />
             <p className="legend-1">Let us make your day!
             </p>
         </div>  
@@ -26,6 +26,11 @@ function Carousels() {
         <div>
             <img src="https://images.squarespace-cdn.com/content/v1/5418a5bae4b0877352524377/1457311229099-7630L329V1EVI1ISHEMT/image-asset.jpeg?format=1000w" alt="image1" />
             <p className="legend-1">Connected. Organic. Alive. Natural.
+            </p>
+        </div>  
+        <div>
+            <img src="https://www.lovemydress.net/wp-content/uploads/2021/04/Elmore-Court-Lavender-Wedding-990x660.jpg" alt="image1" />
+            <p className="legend-1">Memories and joy!
             </p>
         </div>  
         <div>
