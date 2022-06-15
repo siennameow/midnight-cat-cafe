@@ -10,7 +10,7 @@ function Home() {
   return (
     <div>
 
-    <h1 className='h1-font'> Midnight Cat Cafe</h1>
+    <h1 className='h1-font' style={{backgroundColor:"white"}}> Midnight Cat Cafe</h1>
     <Container className='container-home'>
     
     <Carousels />   

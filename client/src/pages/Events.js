@@ -2,7 +2,8 @@ import React from "react";
 import EventCard from "../components/Event/EventCard";
 import { useQuery } from "@apollo/client";
 import { GET_EVENTS } from "../utils/queries";
-import defaultImage from "../assets/images/logo.png";
+import defaultImage from "../assets/images/logo3.png";
+import "../components/Event/event.css"
 
 function Event() {
   const { loading, data } = useQuery(GET_EVENTS, {
@@ -12,9 +13,7 @@ function Event() {
   let idCounter = 0;
   return (
     <div>
-      <h1 className="text-center" style={{ color: "#a16b1b" }}>
-        Upcoming Event
-      </h1>
+      <h1 className="h1-font" style={{backgroundColor:"white"}}>Upcoming Event</h1>
       {loading ? (
         <div>loading...</div>
       ) : (
