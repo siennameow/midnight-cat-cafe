@@ -1,80 +1,73 @@
 [
     {
         "id": "1",
-        "name": "Espresso",
+        "name": "Espurresso",
         "description": "Brazilian single bean origin. A mellow yet nutty flavor typical of a dark roast.",
         "price": "2.99",
-        "image": "https://www.acouplecooks.com/wp-content/uploads/2020/10/how-to-make-a-macchiato-003.jpg"
+        "image": "https://ih1.redbubble.net/image.382125324.7256/st,small,507x507-pad,600x600,f8f8f8.u4.jpg"
     },
     {
         "id": "2",
-        "name": "Latte",
-        "description": "Like your coffee a little sweeter? Try this delicious cafe latte. Foam, steamed milk, and espresso with optional syrups.",
+        "name": "Salty Carameow",
+        "description": "Like your coffee a little sweeter? Try this delicious Salty Carameow. Foam, steamed milk, and espresso with caramel syrups.",
         "price": "4.99",
-        "image": "https://www.acouplecooks.com/wp-content/uploads/2021/05/Latte-Art-069.jpg"
+        "image": "https://ih1.redbubble.net/image.273251025.9585/st,small,507x507-pad,600x600,f8f8f8.u2.jpg"
     },
     {
         "id": "3",
-        "name": "Iced Coffee",
-        "description": "Like your coffee sweet and cold? Try our popular iced coffee. Milk, ice, drip or espresso, and syrup. Optional foam and drizzle of your choice.",
+        "name": "Cold Mew",
+        "description": "Like your coffee sweet and cold? Try our popular iced cold mew. Milk, ice, drip or espresso, and syrup. Optional foam and drizzle of your choice.",
         "price": "4.49",
-        "image": "https://itslivb.com/wp-content/uploads/2021/02/File_000-9-scaled.jpeg"
+        "image": "https://ih1.redbubble.net/image.450055772.7925/st,small,507x507-pad,600x600,f8f8f8.u15.jpg"
     },
     {
         "id": "4",
-        "name": "Americano",
-        "description": "The classic Americano. No explantion needed. Hot water and espresso.",
+        "name": "Decaff Cat",
+        "description": "The classic Decaf. No explantion needed. ",
         "price": "2.49",
-        "image": "https://images.squarespace-cdn.com/content/v1/5a7cbe247131a5f17b3cc8fc/1519447742018-MOHBW2G0VOQ7QSCPJE14/Americano-Coffee-Lounge-Ingredients.jpg"
+        "image": "https://ih1.redbubble.net/image.780452032.0499/st,small,507x507-pad,600x600,f8f8f8.u1.jpg"
     },
     {
         "id": "5",
-        "name": "Bagel",
-        "description": "Artisan-style with a choice of Plain, Everything, Cinnamon Raisin, Blueberry, Chocolate Chip, Asiago, Poppy Seed, Egg, Garlic, or Sesame",
-        "price": "2.99",
-        "image": "https://www.washingtonpost.com/rf/image_982w/2010-2019/WashingtonPost/2021/09/27/Food/Images/v-rr-bagelbrunch001s.jpg"
+        "name": "Matcha Kittea",
+        "description": "Like Matcha? Enjoy this flavorful matcha kittea with sakura!",
+        "price": "4.99",
+        "image": "https://ih1.redbubble.net/image.878451410.7346/st,small,507x507-pad,600x600,f8f8f8.jpg"
     },
     {
         "id": "6",
-        "name": "Donut",
+        "name": "Catcake",
         "description": "Choice of Original Glazed, Powder, Chocolate Sprinkle, Cream Filled, Jelly Filled, Boston Cream, Apple Fritter, or Bear Claw",
-        "price": "1.99",
-        "image": "https://mercatofoods.com/wp-content/uploads/2018/01/donuts_web02.jpg"
+        "price": "3.99",
+        "image": "https://ih1.redbubble.net/image.1187369847.0920/st,small,507x507-pad,600x600,f8f8f8.u2.jpg"
     },
     {
         "id": "7",
-        "name": "Croissant",
-        "description": "Our beautifully crispy yet soft and buttery croissant is rolled and baked every morning.",
-        "price": "2.49",
-        "image": "https://www.theflavorbender.com/wp-content/uploads/2020/05/French-Croissants-2522-780x1169.jpg"
+        "name": "Purrista Pawfee",
+        "description":  "Delectable and rich. Choice of Vanilla, Chocolate, Red Velvet, Fresh Strawberry, Maple Pumpkin, or Lemon Blueberry.",
+        "price": "4.49",
+        "image": "https://ih1.redbubble.net/image.281268167.8431/st,small,507x507-pad,600x600,f8f8f8.u1.jpg"
     },
     {
         "id": "8",
-        "name": "Breakfast Sandwich",
-        "description": "Our savory sandwiches. Choices: Sausage, egg, and cheese bagel; Bacon, egg, and cheese croissant; Breakfast BLT.",
-        "price": "7.99",
-        "image": "https://www.thecookierookie.com/wp-content/uploads/2015/05/ultimate-breakfast-blt-8-of-11.jpg"
+        "name": "Danish Pawstry",
+        "description":"Our beautifully crispy yet soft and buttery pawfee is rolled and baked every morning.",
+        "price": "2.99",
+        "image": "https://ih1.redbubble.net/image.783595833.0999/st,small,507x507-pad,600x600,f8f8f8.jpg"
     },
     {
         "id": "9",
-        "name": "Cupcake",
-        "description": "Delectable and rich. Choice of Vanilla, Chocolate, Red Velvet, Fresh Strawberry, Maple Pumpkin, or Lemon Blueberry.",
-        "price": "1.99",
-        "image": "https://www.harrisranch.com/wp-content/uploads/2020/07/4-pack-of-cupcakes.jpeg"
+        "name": "Maracrons",
+        "description": "Artisan-style with a choice of Plain, Everything, Cinnamon Raisin, Blueberry, Chocolate Chip, matcha, taro, mango or Sesame",
+        "price": "4.99",
+        "image": "https://ih1.redbubble.net/image.1187313264.0081/st,small,507x507-pad,600x600,f8f8f8.jpg"
     },
     {
         "id": "10",
-        "name": "Macaron",
-        "description": "Sweet and scrumptious. Choice of Chocolate and Nutella, Pistachio and White Chocolate, Salted Caramel, Meyer Lemon, or Mango.",
-        "price": "1.99",
-        "image": "https://m.media-amazon.com/images/I/61Y9PGMO2WL._SL1500_.jpg"
-    },
-    {
-        "id": "11",
         "name":"Dairy substitution: Plant Based Milk",
         "description": "Oatmilk, Almond milk, Hemp milk, Flax Milk, Soy milk.",
         "price": " +0.99 (additional charge)",
-        "image": "https://cdn.livekindly.co/wp-content/uploads/2020/09/vegan-plant-based-news-plant-milk-livekindly.png"
+        "image": "https://ih1.redbubble.net/image.427562733.4955/st,small,507x507-pad,600x600,f8f8f8.u2.jpg"
 
     }
 ]
