@@ -1,3 +1,5 @@
+
+
 .primary {
     background-color: #5B4B8A !important;
     width: 30%;
@@ -40,3 +42,12 @@
     }
 
      }
+
+.menu-card{
+    
+    background: url(https://media.istockphoto.com/photos/white-plywood-textured-wooden-background-or-wood-surface-of-the-old-picture-id1176688064?b=1&k=20&m=1176688064&s=170667a&w=0&h=5sUtQfg6bPwWPAPfZLpz2L135dQdibHQzRzs_X0FJu4=) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

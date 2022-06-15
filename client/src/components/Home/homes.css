@@ -3,14 +3,21 @@ body {
     font-size: 24px;
     line-height: 1.42857143;
     color: rgb(86, 77, 77);
-    background-color: rgb(238, 237, 244);
+    /* background-color: rgb(238, 237, 244); */
+
+        background: url(https://thebeautyandthebeachblog.files.wordpress.com/2017/10/img_0427.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
 }
 
 
 .h1-font {
     justify-content: center !important;
     text-align: center !important;
-    color: #65539d;
+    color: #ffffff;
     margin-top: 40px;
 }
 
@@ -56,8 +63,7 @@ p {
     text-align: center !important;
     font-size: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color:#57507f ;
-    opacity: 0.5;
+    background-color:#614e8181 ;
 
 }
 
@@ -72,9 +78,9 @@ p {
   }
 }
 
-img { 
-    opacity: 70% !important;
-}
+/* img { 
+    filter: brightness(110%);
+} */
 
 .image1 {
     border-color: #5B4B8A;
