@@ -1,5 +1,5 @@
 .light {
-    background-color: #30154e;
+    background-color: #6563a2b5;
     font-size: 24px;
     line-height: 1.3334133333;
     font-weight: 400;
@@ -20,7 +20,7 @@
     border-radius: 2em !important;
     background-color: #ffffff;
     padding: 10px;
-    color: #363062 !important; 
+    color: #65539d !important; 
 }
 
 .pills {
@@ -34,10 +34,10 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .link {
-    color: #30154e !important;
+    color: #65539d !important;
 }
 
 .link:hover {
-    background-color: #363062;
+    background-color: #65539d;
     color: #ffffff !important;
 }
