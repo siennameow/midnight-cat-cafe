@@ -31,12 +31,12 @@ The home page also has a navbar that allows users to navigate to the Shopping pa
 
 Desktop Version
 
-![Midnight Cat Cafe (2) copy 4](https://user-images.githubusercontent.com/101283174/174195980-db5cb5b2-ebfa-415a-8649-c92efec3ca71.gif)
+![Midnight Cat Cafe (2) copy 8](https://user-images.githubusercontent.com/101283174/174196614-bbecd53a-f30e-49d1-9388-10c85067e54b.gif)
 
 
 Mobile Version  
 
-![Midnight Cat Cafe (2) copy 6](https://user-images.githubusercontent.com/101283174/174196158-5911593c-631e-4897-a340-f42a07fce87c.gif)
+![Midnight Cat Cafe (2) copy 7](https://user-images.githubusercontent.com/101283174/174196559-6d749e53-fa09-4d29-972b-b079c74ace6c.gif)
 
 
 ## Installation
@@ -61,16 +61,22 @@ The app itself acts like a website for a small store-front cafe. There tabs for
 the menu, purchasing merchandise, events, and making an account to sign up for
 said events. 
 
+The home is a welcome page where user can view the image to get first impression of the cafe. User can also see the introduction of the cafe and inquire for information about hosting events by click button and send email to cafe admin.
+![Screen Shot 2022-06-16 at 4 54 19 PM](https://user-images.githubusercontent.com/101283174/174196632-3d59f5e0-e636-4fd3-b701-704094328b39.png)
+
 The Menu is simply a display of drinks and food items a cafe might sell, with
 prices that are semi-reasonable. They also have images that can be dismissed by 
-clicking/tapping on the red X in the upper left hand corner. 
+clicking/tapping on the red X in the upper l![Screen Shot 2022-06-16 at 4 56 29 PM](https://user-images.githubusercontent.com/101283174/174196754-d2c2b7be-c112-48f9-b2db-ac3ef685484d.png)
+eft hand corner. 
 
 The Merch tab has ficitonal cat products to buy as well. Unlike the 
 menu we've put in a fake "buy now" interface that uses 
 [stripe](https://stripe.com/) as a payment system. 
+![Screen Shot 2022-06-16 at 4 57 20 PM](https://user-images.githubusercontent.com/101283174/174196775-c5a37fb1-6a4b-4769-aa31-ed3df36759d9.png)
 
 The Events are events linked to the cafe. They are held inside the database and
 hold a list of users as the people who will frequent the event. 
+![Screen Shot 2022-06-16 at 4 58 14 PM](https://user-images.githubusercontent.com/101283174/174196836-01c92f5c-ea4b-49eb-9ab5-35d45f62dab0.png)
 
 It works by using graphQL to send requests and responses to the database and 
 it updates as appropriate. 
