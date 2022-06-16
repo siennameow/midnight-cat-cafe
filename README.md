@@ -31,12 +31,12 @@ The home page also has a navbar that allows users to navigate to the Shopping pa
 
 Desktop Version
 
-![Midnight Cat Cafe (2) copy 2](https://user-images.githubusercontent.com/101283174/173273098-5d8d1415-045b-44c4-902e-763b726f6113.gif)
+![Midnight Cat Cafe (2) copy 4](https://user-images.githubusercontent.com/101283174/174195980-db5cb5b2-ebfa-415a-8649-c92efec3ca71.gif)
 
 
 Mobile Version  
 
-![Midnight Cat Cafe (2) copy](https://user-images.githubusercontent.com/101283174/173272894-1ea2bfbe-02ea-42ea-8853-dbaf11221b83.gif)
+![Midnight Cat Cafe (2) copy 6](https://user-images.githubusercontent.com/101283174/174196158-5911593c-631e-4897-a340-f42a07fce87c.gif)
 
 
 ## Installation
@@ -67,12 +67,10 @@ clicking/tapping on the red X in the upper left hand corner.
 
 The Merch tab has ficitonal cat products to buy as well. Unlike the 
 menu we've put in a fake "buy now" interface that uses 
-[stripe](https://stripe.com/) as a payment system, but it doesn't actually do
-anything with the information. 
+[stripe](https://stripe.com/) as a payment system. 
 
 The Events are events linked to the cafe. They are held inside the database and
-hold a list of users as the people who will frequent the event. Those users are
-just usernames displayed. 
+hold a list of users as the people who will frequent the event. 
 
 It works by using graphQL to send requests and responses to the database and 
 it updates as appropriate. 
