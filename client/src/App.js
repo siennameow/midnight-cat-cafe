@@ -8,6 +8,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import ReactAudioPlayer from 'react-audio-player';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/nav/Navbar";
@@ -52,6 +53,11 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
+          <center><ReactAudioPlayer
+          src="https://sharefs.ali.kugou.com/202206170138/ef092363528463ab26c0a7cff9d1a388/KGTX/CLTX001/4e5569c305e7dbe0e42f9bfed6b7e000.mp3"
+          autoPlay
+          controls
+            /></center>
         </>
       </Router>
     </ApolloProvider>
