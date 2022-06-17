@@ -62,7 +62,7 @@ the menu, purchasing merchandise, events, and making an account to sign up for
 said events. 
 
 The home is a welcome page where user can view the image to get first impression of the cafe. User can also see the introduction of the cafe and inquire for information about hosting events by click button and send email to cafe admin.
-![Screen Shot 2022-06-16 at 4 54 19 PM](https://user-images.githubusercontent.com/101283174/174196632-3d59f5e0-e636-4fd3-b701-704094328b39.png)
+![Screen Shot 2022-06-16 at 4 59 52 PM](https://user-images.githubusercontent.com/101283174/174196963-a462584e-9989-42b5-9685-9c7542c8b409.png)
 
 The Menu is simply a display of drinks and food items a cafe might sell, with
 prices that are semi-reasonable. They also have images that can be dismissed by 
